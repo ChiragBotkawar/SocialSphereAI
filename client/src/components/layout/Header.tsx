@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown, Mail, Search, Facebook, Linkedin, Instagram, Youtube, Twitter } from 'lucide-react';
 import { cn } from '../../utils/helpers';
-import { NAV_ITEMS } from '../../utils/constants';
+import { NAV_ITEMS, type NavItem } from '../../utils/constants';
 import MobileNav from './MobileNav';
 
 export default function Header() {
@@ -92,13 +92,13 @@ export default function Header() {
 
                       {/* Three columns */}
                       <div className="grid grid-cols-3 gap-8 mb-6">
-                        {item.megaMenu.columns.map((column, idx) => (
+                        {item.megaMenu!.columns.map((column, idx: number) => (
                           <div key={idx}>
                             {column.heading && (
                               <h3 className="text-[15px] font-semibold text-dark mb-3">{column.heading}</h3>
                             )}
                             <div className="space-y-2">
-                              {column.items.map((link) => (
+                              {column.items.map((link: { label: string; href: string }) => (
                                 <NavLink
                                   key={link.label}
                                   to={link.href}
