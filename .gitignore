@@ -2,6 +2,11 @@
 node_modules/
 .npm
 
+# Lock files (generated per-platform; let CI regenerate on Linux)
+package-lock.json
+client/package-lock.json
+server/package-lock.json
+
 # Build outputs
 dist/
 build/
