@@ -144,7 +144,15 @@ export const BNI_HISTORY = [
 // ──────────────────────────────────────────────
 // Navigation Structure
 // ──────────────────────────────────────────────
-export const NAV_ITEMS = [
+type MegaMenuLink = { label: string; href: string };
+type MegaMenuColumn = { heading?: string; items: MegaMenuLink[] };
+export type NavItem = {
+  label: string;
+  href: string;
+  megaMenu?: { columns: MegaMenuColumn[] };
+};
+
+export const NAV_ITEMS: NavItem[] = [
   {
     label: 'The BNI Experience',
     href: '/the-bni-experience',
@@ -195,7 +203,7 @@ export const NAV_ITEMS = [
       ],
     },
   },
-] as const;
+];
 
 // ──────────────────────────────────────────────
 // Blog Categories

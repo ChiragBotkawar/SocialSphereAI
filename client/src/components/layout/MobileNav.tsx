@@ -3,6 +3,7 @@ import { NavLink, Link } from 'react-router-dom';
 import { ChevronDown } from 'lucide-react';
 import { cn } from '../../utils/helpers';
 import { NAV_ITEMS } from '../../utils/constants';
+import type { NavItem } from '../../utils/constants';
 
 interface MobileNavProps {
   isOpen: boolean;
@@ -42,14 +43,14 @@ export default function MobileNav({ isOpen, onClose }: MobileNavProps) {
                   </button>
                   {expandedItem === item.label && (
                     <div className="ml-4 mt-1 flex flex-col gap-1 border-l-2 border-primary/20 pl-3">
-                      {item.megaMenu.columns.map((column, colIdx) => (
+                      {item.megaMenu!.columns.map((column, colIdx: number) => (
                         <div key={colIdx}>
                           {column.heading && (
                             <div className="px-3 py-2 text-xs font-semibold text-dark uppercase tracking-wider">
                               {column.heading}
                             </div>
                           )}
-                          {column.items.map((child) => (
+                          {column.items.map((child: { label: string; href: string }) => (
                             <NavLink
                               key={child.label}
                               to={child.href}
