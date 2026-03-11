@@ -1,0 +1,167 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ──────────────────────────────────────────────
+   Base Styles
+────────────────────────────────────────────── */
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans text-dark bg-white antialiased;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold text-dark leading-tight;
+  }
+
+  a {
+    @apply transition-colors duration-200;
+  }
+
+  img {
+    @apply max-w-full;
+  }
+
+  /* Focus styles for accessibility */
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-primary;
+  }
+}
+
+/* ──────────────────────────────────────────────
+   Component Layer
+────────────────────────────────────────────── */
+@layer components {
+  /* Container */
+  .container-bni {
+    @apply max-w-[1200px] mx-auto px-6;
+  }
+
+  /* Section padding */
+  .section-padding {
+    @apply py-20;
+  }
+
+  /* Primary Button */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2
+           bg-primary hover:bg-primary-dark
+           text-white font-semibold
+           px-6 py-3 rounded-lg
+           transition-all duration-200
+           focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary
+           disabled:opacity-60 disabled:cursor-not-allowed;
+  }
+
+  /* Secondary / Outline Button */
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2
+           border-2 border-primary text-primary
+           hover:bg-primary hover:text-white
+           font-semibold
+           px-6 py-3 rounded-lg
+           transition-all duration-200;
+  }
+
+  /* White button (used on dark/red backgrounds) */
+  .btn-white {
+    @apply inline-flex items-center justify-center gap-2
+           bg-white text-primary
+           hover:bg-gray-100
+           font-semibold
+           px-6 py-3 rounded-lg
+           transition-all duration-200;
+  }
+
+  /* Card base */
+  .card {
+    @apply bg-white rounded-card shadow-card hover:shadow-card-hover
+           transition-all duration-200;
+  }
+
+  /* Section title */
+  .section-title {
+    @apply text-[36px] font-bold text-dark leading-tight;
+  }
+
+  /* Red underline decoration */
+  .title-underline {
+    @apply relative after:content-[''] after:absolute after:bottom-[-8px] after:left-0
+           after:w-12 after:h-1 after:bg-primary after:rounded-full;
+  }
+
+  /* Badge */
+  .badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium;
+  }
+  .badge-red {
+    @apply badge bg-primary/10 text-primary;
+  }
+  .badge-gray {
+    @apply badge bg-neutral text-dark;
+  }
+
+  /* Form input */
+  .form-input {
+    @apply w-full px-4 py-3 border border-neutral rounded-lg
+           text-dark placeholder-gray-400
+           focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary
+           transition-colors duration-200
+           bg-white;
+  }
+
+  /* Form label */
+  .form-label {
+    @apply block text-sm font-semibold text-dark mb-1.5;
+  }
+
+  /* Nav link */
+  .nav-link {
+    @apply text-dark font-medium hover:text-primary transition-colors duration-200
+           relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0
+           after:w-0 hover:after:w-full after:h-0.5 after:bg-primary
+           after:transition-all after:duration-200;
+  }
+}
+
+/* ──────────────────────────────────────────────
+   Swiper Overrides
+────────────────────────────────────────────── */
+.swiper-pagination-bullet-active {
+  background-color: #E31837 !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #E31837 !important;
+}
+
+/* ──────────────────────────────────────────────
+   Scrollbar (subtle)
+────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F5F5F5;
+}
+::-webkit-scrollbar-thumb {
+  background: #D9D9D9;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #E31837;
+}

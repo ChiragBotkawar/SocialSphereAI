@@ -1,0 +1,45 @@
+{
+  "name": "bni-platform",
+  "version": "1.0.0",
+  "description": "BNI Business Network International - Production-grade platform",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "npm run dev --workspace=server",
+    "dev:client": "npm run dev --workspace=client",
+    "build": "npm run build --workspace=client && npm run build --workspace=server",
+    "install:all": "npm install && npm install --workspace=client && npm install --workspace=server"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  },
+  "dependencies": {
+    "@alloc/quick-lru": "^5.2.0",
+    "arg": "^5.0.2",
+    "chokidar": "^3.6.0",
+    "didyoumean": "^1.2.2",
+    "dlv": "^1.1.3",
+    "fast-glob": "^3.3.3",
+    "framer-motion": "^10.18.0",
+    "glob-parent": "^6.0.2",
+    "is-glob": "^4.0.3",
+    "jiti": "^1.21.7",
+    "lilconfig": "^3.1.3",
+    "lodash": "^4.17.23",
+    "micromatch": "^4.0.8",
+    "normalize-path": "^3.0.0",
+    "object-hash": "^3.0.0",
+    "picocolors": "^1.1.1",
+    "postcss-import": "^15.1.0",
+    "postcss-js": "^4.1.0",
+    "postcss-load-config": "^4.0.2",
+    "postcss-nested": "^6.2.0",
+    "postcss-selector-parser": "^6.1.2",
+    "react-hook-form": "^7.71.2",
+    "resolve": "^1.22.11"
+  }
+}
