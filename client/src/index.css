@@ -47,7 +47,7 @@
 @layer components {
   /* Container */
   .container-bni {
-    @apply max-w-[1200px] mx-auto px-6;
+    @apply max-w-[1200px] mx-auto px-6 sm:px-8 lg:px-12;
   }
 
   /* Section padding */
@@ -164,4 +164,17 @@
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #E31837;
+}
+
+/* ──────────────────────────────────────────────
+   Infinite Marquee Animations
+────────────────────────────────────────────── */
+@keyframes scrollLeft {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes scrollRight {
+  0%   { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
 }

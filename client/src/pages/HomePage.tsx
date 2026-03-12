@@ -6,7 +6,6 @@ import VideoSection from '../components/home/VideoSection';
 import TestimonialsSection from '../components/home/TestimonialsSection';
 import HowToJoinSection from '../components/home/HowToJoinSection';
 import FindChapterCTA from '../components/home/FindChapterCTA';
-import GlobalPresenceSection from '../components/home/GlobalPresenceSection';
 
 export default function HomePage() {
   return (
@@ -25,7 +24,6 @@ export default function HomePage() {
       <VideoSection />
       <TestimonialsSection />
       <HowToJoinSection />
-      <GlobalPresenceSection />
       <FindChapterCTA />
     </>
   );

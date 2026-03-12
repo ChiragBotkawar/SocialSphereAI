@@ -1,85 +1,208 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Facebook, Twitter, Linkedin, Instagram, Youtube } from 'lucide-react';
-import { FOOTER_LINKS, SOCIAL_LINKS } from '../../utils/constants';
-import Container from '../ui/Container';
+import { Phone, Mail, MapPin, Facebook, Linkedin, Instagram, Youtube } from 'lucide-react';
 
-const SOCIAL_ENTRIES = [
-  { name: 'Facebook', href: SOCIAL_LINKS.facebook, Icon: Facebook },
-  { name: 'Twitter', href: SOCIAL_LINKS.twitter, Icon: Twitter },
-  { name: 'LinkedIn', href: SOCIAL_LINKS.linkedin, Icon: Linkedin },
-  { name: 'Instagram', href: SOCIAL_LINKS.instagram, Icon: Instagram },
-  { name: 'YouTube', href: SOCIAL_LINKS.youtube, Icon: Youtube },
+/* X (Twitter) icon — lucide dropped it, draw inline */
+function XIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
+      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L2.018 2.25H8.08l4.253 5.623L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z" />
+    </svg>
+  );
+}
+
+/* ── Column data ─────────────────────────────────────────────────────────── */
+const COL1 = [
+  { label: 'The BNI Experience', href: '/the-bni-experience' },
+  { label: 'Our Global Community', href: '/about' },
+  { label: 'My BNI Story', href: '/success-stories' },
+  { label: 'BNI Franchising', href: '/start-a-chapter' },
 ];
 
-const FOOTER_COLUMNS = [
-  { heading: 'Company', links: FOOTER_LINKS.company },
-  { heading: 'Network', links: FOOTER_LINKS.network },
-  { heading: 'Regions', links: FOOTER_LINKS.regions },
+const COL2_HEADING = 'About Us';
+const COL2 = [
+  { label: 'Leadership', href: '/about' },
+  { label: 'National Directors', href: '/about' },
+  { label: 'Our Founder', href: '/about' },
+  { label: 'BNI® Foundation', href: '/about' },
 ];
+
+const COL3_HEADING = 'The Latest';
+const COL3 = [
+  { label: 'Blog & News', href: '/blog' },
+  { label: 'Networking Tips', href: '/blog' },
+  { label: 'Global Events', href: '/events' },
+  { label: 'Careers', href: '/careers' },
+];
+
+const COL4 = [
+  { label: 'Find a Chapter', href: '/find-a-chapter' },
+  { label: 'Start a Chapter', href: '/start-a-chapter' },
+  { label: 'Exclusive Member Benefits', href: '/about' },
+  { label: 'Contact Us', href: '/contact' },
+];
+
+const COL5_HEADING = 'Member Services';
+const COL5 = [
+  { label: 'BNI Connect', href: '#' },
+  { label: 'BNI Business Builder', href: '#' },
+  { label: 'BNI Brandshare', href: '#' },
+  { label: 'BNI US Store', href: '#' },
+  { label: 'BNI Global Store', href: '#' },
+];
+
+const BG = '#6B6B6B';
+const TEXT = 'text-gray-200';
+const HOVER = 'hover:text-white transition-colors duration-150';
 
 export default function Footer() {
+  const [email, setEmail] = useState('');
+
   return (
-    <footer className="bg-dark text-gray-400">
-      <Container className="py-16">
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-5">
-          {/* Brand column */}
-          <div className="lg:col-span-2">
-            <Link to="/" className="inline-flex items-center gap-2 mb-4">
-              <div className="flex h-9 w-9 items-center justify-center rounded bg-primary">
-                <span className="text-lg font-black text-white">B</span>
-              </div>
-              <span className="text-xl font-black text-white tracking-tight">
-                BNI<span className="text-primary">®</span>
-              </span>
-            </Link>
-            <p className="text-sm leading-relaxed max-w-xs">
-              Business Network International — the world's leading business referral organisation with over 300,000 members in 76+ countries.
-            </p>
-            {/* Social links */}
-            <div className="mt-6 flex items-center gap-3">
-              {SOCIAL_ENTRIES.map(({ name, href, Icon }) => (
-                <a
-                  key={name}
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={name}
-                  className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 hover:bg-primary transition-colors"
-                >
-                  <Icon className="h-4 w-4 text-white" />
-                </a>
+    <footer style={{ backgroundColor: BG }} className="text-gray-300">
+      {/* ── Main link grid ──────────────────────────────────────────────── */}
+      <div className="container-bni py-14">
+        <div className="grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 lg:grid-cols-6">
+
+          {/* Col 1 — no heading */}
+          <ul className="space-y-3">
+            {COL1.map(l => (
+              <li key={l.label}>
+                <Link to={l.href} className={`text-sm font-semibold ${TEXT} ${HOVER}`}>{l.label}</Link>
+              </li>
+            ))}
+          </ul>
+
+          {/* Col 2 — About Us */}
+          <div>
+            <h3 className="mb-4 text-sm font-bold text-white">{COL2_HEADING}</h3>
+            <ul className="space-y-3">
+              {COL2.map(l => (
+                <li key={l.label}>
+                  <Link to={l.href} className={`text-sm ${TEXT} ${HOVER}`}>{l.label}</Link>
+                </li>
               ))}
+            </ul>
+          </div>
+
+          {/* Col 3 — The Latest */}
+          <div>
+            <h3 className="mb-4 text-sm font-bold text-white">{COL3_HEADING}</h3>
+            <ul className="space-y-3">
+              {COL3.map(l => (
+                <li key={l.label}>
+                  <Link to={l.href} className={`text-sm ${TEXT} ${HOVER}`}>{l.label}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Col 4 — no heading */}
+          <ul className="space-y-3">
+            {COL4.map(l => (
+              <li key={l.label}>
+                <Link to={l.href} className={`text-sm ${TEXT} ${HOVER}`}>{l.label}</Link>
+              </li>
+            ))}
+          </ul>
+
+          {/* Col 5 — Member Services */}
+          <div>
+            <h3 className="mb-4 text-sm font-bold text-white">{COL5_HEADING}</h3>
+            <ul className="space-y-3">
+              {COL5.map(l => (
+                <li key={l.label}>
+                  <Link to={l.href} className={`text-sm ${TEXT} ${HOVER}`}>{l.label}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Col 6 — Contact */}
+          <div className="space-y-4">
+            <div className="flex items-start gap-2.5">
+              <Phone className="h-4 w-4 mt-0.5 shrink-0 text-gray-300" />
+              <div>
+                <p className="text-sm text-gray-200 font-medium">In U.S.</p>
+                <p className="text-sm text-gray-300">(800)-825-8286</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-2.5">
+              <Mail className="h-4 w-4 mt-0.5 shrink-0 text-gray-300" />
+              <div>
+                <p className="text-sm text-gray-200 font-medium">Outside U.S.</p>
+                <a href="mailto:support@bni.com" className={`text-sm text-gray-300 ${HOVER}`}>support@bni.com</a>
+              </div>
+            </div>
+            <div className="flex items-start gap-2.5">
+              <MapPin className="h-4 w-4 mt-0.5 shrink-0 text-gray-300" />
+              <p className="text-sm text-gray-300 leading-relaxed">
+                3430 Toringdon Way,<br />Suite 300 Charlotte, NC 28277
+              </p>
             </div>
           </div>
 
-          {/* Link columns */}
-          {FOOTER_COLUMNS.map((col) => (
-            <div key={col.heading}>
-              <h3 className="mb-4 text-sm font-semibold uppercase tracking-widest text-white">{col.heading}</h3>
-              <ul className="space-y-2">
-                {col.links.map((link) => (
-                  <li key={link.label}>
-                    <Link to={link.href} className="text-sm hover:text-white transition-colors">
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
         </div>
-      </Container>
+      </div>
 
-      {/* Bottom bar */}
-      <div className="border-t border-white/10">
-        <Container className="flex flex-col items-center justify-between gap-3 py-6 text-xs sm:flex-row">
-          <p>© {new Date().getFullYear()} BNI. All rights reserved.</p>
-          <div className="flex items-center gap-4">
-            <Link to="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
-            <Link to="/terms-of-use" className="hover:text-white transition-colors">Terms of Use</Link>
-            <Link to="/cookie-policy" className="hover:text-white transition-colors">Cookie Policy</Link>
+      {/* ── Bottom bar ──────────────────────────────────────────────────── */}
+      <div style={{ backgroundColor: '#5E5E5E' }} className="border-t border-white/10">
+        <div className="container-bni py-8">
+          <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+
+            {/* Left: SuccessNet blurb */}
+            <div className="shrink-0">
+              <p className="text-base font-black text-white tracking-tight">
+                BNI SuccessNet<sup className="text-xs">TM</sup>
+              </p>
+              <p className="mt-0.5 text-xs text-gray-300">Sign up for exclusive networking tips and more.</p>
+            </div>
+
+            {/* Center: email form */}
+            <form
+              onSubmit={(e) => { e.preventDefault(); setEmail(''); }}
+              className="flex items-center gap-0 rounded-full overflow-hidden bg-white shadow-md w-full max-w-sm"
+            >
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Email"
+                required
+                className="flex-1 min-w-0 px-5 py-3 text-sm text-gray-800 placeholder-gray-400 bg-transparent focus:outline-none"
+              />
+              <button
+                type="submit"
+                aria-label="Subscribe"
+                className="flex-shrink-0 flex h-full items-center justify-center bg-primary hover:bg-primary-dark transition-colors px-5 py-3"
+              >
+                <svg viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5 text-white">
+                  <path fillRule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clipRule="evenodd" />
+                </svg>
+              </button>
+            </form>
+
+            {/* Right: Follow BNI + socials */}
+            <div className="flex items-center gap-4 shrink-0">
+              <span className="text-sm font-semibold text-white whitespace-nowrap">Follow BNI</span>
+              <a href="https://www.facebook.com/BNIGlobal" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className={`text-gray-300 ${HOVER}`}>
+                <Facebook className="h-5 w-5" />
+              </a>
+              <a href="https://www.linkedin.com/company/bni" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className={`text-gray-300 ${HOVER}`}>
+                <Linkedin className="h-5 w-5" />
+              </a>
+              <a href="https://www.instagram.com/bniglobal" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className={`text-gray-300 ${HOVER}`}>
+                <Instagram className="h-5 w-5" />
+              </a>
+              <a href="https://www.youtube.com/user/BNIVideos" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className={`text-gray-300 ${HOVER}`}>
+                <Youtube className="h-5 w-5" />
+              </a>
+              <a href="https://twitter.com/BNIGlobal" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" className={`text-gray-300 ${HOVER}`}>
+                <XIcon className="h-5 w-5" />
+              </a>
+            </div>
           </div>
-        </Container>
+        </div>
       </div>
     </footer>
   );

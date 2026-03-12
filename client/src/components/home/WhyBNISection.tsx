@@ -22,7 +22,7 @@ export default function WhyBNISection() {
         />
 
         <motion.div
-          className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3"
+          className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8"
           variants={stagger}
           initial="hidden"
           whileInView="visible"
@@ -34,13 +34,13 @@ export default function WhyBNISection() {
               <motion.div
                 key={value.title}
                 variants={item}
-                className="card group relative overflow-hidden"
+                className="card group relative overflow-hidden p-8 hover:shadow-2xl"
               >
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
-                  <Icon className="h-6 w-6 text-primary" />
+                <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 group-hover:bg-primary/20 transition-colors">
+                  <Icon className="h-7 w-7 text-primary" />
                 </div>
-                <h3 className="mb-2 text-lg font-bold text-dark">{value.title}</h3>
-                <p className="text-sm leading-relaxed text-gray-600">{value.description}</p>
+                <h3 className="mb-3 text-xl font-bold text-dark leading-snug">{value.title}</h3>
+                <p className="text-sm leading-relaxed text-gray-600 pb-2">{value.description}</p>
                 {/* Accent line */}
                 <div className="absolute bottom-0 left-0 h-1 w-0 bg-primary group-hover:w-full transition-all duration-300" />
               </motion.div>

@@ -1,70 +1,112 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import { Star } from 'lucide-react';
-import Container from '../ui/Container';
-import SectionTitle from '../ui/SectionTitle';
-import { useQuery } from '@tanstack/react-query';
-import { testimonialService } from '../../services/testimonialService';
-import { getInitials } from '../../utils/helpers';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+
+const steps = [
+  {
+    number: '1',
+    title: 'Visit a BNI chapter',
+    description: 'and experience the power of the BNI network',
+  },
+  {
+    number: '2',
+    title: 'Meet the Members',
+    description: 'and learn how they can help you grow your business',
+  },
+  {
+    number: '3',
+    title: 'Apply',
+    description: 'to become a Member of a BNI Chapter',
+  },
+];
 
 export default function TestimonialsSection() {
-  const { data: testimonials } = useQuery({
-    queryKey: ['testimonials', 'featured'],
-    queryFn: () => testimonialService.getTestimonials({ featured: true, limit: 8 }),
-  });
-
-  const fallback = [
-    { authorName: 'Rajesh Sharma', authorTitle: 'CEO', authorCompany: 'TechSolutions India', content: 'BNI completely transformed my business. Within 6 months of joining, I received over 40 qualified referrals and generated ₹25 lakhs in additional revenue.', rating: 5 },
-    { authorName: 'Sarah Mitchell', authorTitle: 'Founder', authorCompany: 'Creative Studio NYC', content: 'The structured networking and accountability in BNI is unmatched. My chapter became my most valuable business partner.', rating: 5 },
-    { authorName: 'Ahmed Al-Rashid', authorTitle: 'Managing Director', authorCompany: 'Gulf Trade Co', content: 'As a business owner in Dubai, BNI gave me a global network and local trusted relationships that no other platform could deliver.', rating: 5 },
-  ];
-
-  const displayData = testimonials?.length ? testimonials : fallback;
-
   return (
-    <section className="section-padding bg-light-bg">
-      <Container>
-        <SectionTitle
-          eyebrow="Success Stories"
-          title="Members Who Transformed Their Business"
-          subtitle="Real stories from real BNI members who leveraged the power of referrals to grow their revenue."
-        />
+    <section
+      className="relative py-20 lg:py-28 overflow-hidden"
+      style={{ backgroundColor: '#B81C2C' }}
+    >
+      {/* Subtle dot-grid pattern overlay */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage:
+            'radial-gradient(circle, rgba(255,255,255,0.13) 1.5px, transparent 1.5px)',
+          backgroundSize: '22px 22px',
+        }}
+      />
 
-        <Swiper
-          modules={[Autoplay, Pagination]}
-          spaceBetween={24}
-          slidesPerView={1}
-          breakpoints={{ 640: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }}
-          autoplay={{ delay: 4000, disableOnInteraction: false }}
-          pagination={{ clickable: true }}
-          className="pb-10"
+      <div className="container-bni relative z-10 text-center">
+        {/* Heading */}
+        <motion.h2
+          initial={{ opacity: 0, y: 22 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-4xl font-black text-white lg:text-5xl mb-4"
         >
-          {displayData.map((t, i) => (
-            <SwiperSlide key={i}>
-              <div className="card h-full flex flex-col">
-                {/* Stars */}
-                <div className="flex gap-1 mb-4">
-                  {Array.from({ length: ('rating' in t ? t.rating : 5) }).map((_, j) => (
-                    <Star key={j} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                  ))}
-                </div>
-                <p className="flex-1 text-sm leading-relaxed text-gray-700 italic">"{t.content}"</p>
-                <div className="mt-6 flex items-center gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-sm font-bold text-white shrink-0">
-                    {getInitials(t.authorName)}
-                  </div>
-                  <div>
-                    <p className="font-semibold text-dark text-sm">{t.authorName}</p>
-                    <p className="text-xs text-gray-500">{t.authorTitle}, {t.authorCompany}</p>
-                  </div>
-                </div>
+          3 Steps to Success
+        </motion.h2>
+
+        {/* Sub-heading */}
+        <motion.p
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="text-white/80 text-base lg:text-lg mb-16 max-w-2xl mx-auto"
+        >
+          Get invited to a BNI networking meeting and witness the power of referrals in action.
+        </motion.p>
+
+        {/* Steps row */}
+        <div className="relative flex flex-col lg:flex-row items-start justify-center gap-10 lg:gap-0 mb-14">
+          {/* Horizontal connector line (desktop) */}
+          <div className="hidden lg:block absolute top-7 left-1/2 -translate-x-1/2 w-[54%] h-px bg-white/30" />
+
+          {steps.map((step, i) => (
+            <motion.div
+              key={step.number}
+              className="relative z-10 flex flex-col items-center text-center flex-1 max-w-[240px] mx-auto"
+              initial={{ opacity: 0, y: 26 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.55, delay: 0.12 + i * 0.13 }}
+            >
+              {/* Number circle */}
+              <div
+                className="w-14 h-14 rounded-full bg-white flex items-center justify-center mb-5 shadow-md"
+              >
+                <span
+                  className="text-2xl font-black"
+                  style={{ color: '#B81C2C' }}
+                >
+                  {step.number}
+                </span>
               </div>
-            </SwiperSlide>
+
+              <h3 className="text-white font-bold text-xl mb-2">{step.title}</h3>
+              <p className="text-white/75 text-sm leading-relaxed">{step.description}</p>
+            </motion.div>
           ))}
-        </Swiper>
-      </Container>
+        </div>
+
+        {/* CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+        >
+          <Link
+            to="/find-a-chapter"
+            className="inline-block bg-white font-black text-sm uppercase tracking-widest px-12 py-4 rounded-full shadow-lg hover:bg-gray-100 transition-colors duration-200"
+            style={{ color: '#B81C2C' }}
+          >
+            GET INVITED
+          </Link>
+        </motion.div>
+      </div>
     </section>
   );
 }
+
