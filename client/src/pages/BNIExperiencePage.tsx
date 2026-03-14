@@ -2,7 +2,7 @@ import { Helmet } from 'react-helmet-async';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { Play, X, Users, Globe, Award, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Play, X, Users, Globe, Award, ChevronLeft, ChevronRight, ChevronDown, Monitor, UsersRound, Laptop } from 'lucide-react';
 import Container from '../components/ui/Container';
 
 /* ── Data ───────────────────────────────────────────────── */
@@ -96,6 +96,84 @@ const TESTIMONIALS = [
   },
 ];
 
+const PATH_STEPS = [
+  {
+    number: '01',
+    title: 'Visit A BNI Chapter',
+    description: 'and experience the power of the BNI network',
+  },
+  {
+    number: '02',
+    title: 'Meet The Members',
+    description: 'and learn how they can help you grow your business',
+  },
+  {
+    number: '03',
+    title: 'Apply',
+    description: 'to become a member of BNI chapter',
+  },
+];
+
+const EXPERIENCE_WAYS = [
+  {
+    title: 'BNI In-Person',
+    description: 'A very personal way to meet, connect and grow.',
+    image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80',
+    icon: UsersRound,
+  },
+  {
+    title: 'BNI Hybrid',
+    description: 'The best of both. Meet in-person first week of the month and the rest online.',
+    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80',
+    icon: Users,
+  },
+  {
+    title: 'BNI® Online',
+    description: 'A convenient way to meet, connect and grow from the comfort of your home or office.',
+    image: 'https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?w=600&q=80',
+    icon: Laptop,
+  },
+];
+
+const FAQ_ITEMS = [
+  {
+    question: 'How do I find a Chapter?',
+    answer: 'You can find a BNI chapter near you by using our Find a Chapter tool on our website. Simply enter your location to see available chapters in your area.',
+  },
+  {
+    question: 'How do I join a Chapter?',
+    answer: 'To join a BNI chapter, start by visiting a chapter meeting as a guest. After your visit, you can submit an application. A membership committee will review your application and profession availability.',
+  },
+  {
+    question: 'How do I get an application, and can I apply online?',
+    answer: 'You can get an application from the chapter you wish to join or apply online through the BNI website. Visit the chapter page and click on the apply button to start the process.',
+  },
+  {
+    question: 'What occupation benefits the most from networking?',
+    answer: 'Every occupation can benefit from networking! BNI members come from all industries including financial services, real estate, IT, marketing, healthcare, legal services, and many more.',
+  },
+  {
+    question: 'Do new Members need to be sponsored to join?',
+    answer: 'Yes, new members typically need a sponsor who is an existing BNI member. Your sponsor helps introduce you to the chapter and guides you through the membership process.',
+  },
+  {
+    question: 'Are Members encouraged to bring visitors?',
+    answer: 'Absolutely! BNI members are encouraged to invite business professionals to visit their chapter. Visitors get to experience a BNI meeting firsthand and see the value of membership.',
+  },
+  {
+    question: 'How do you know new Members are reputable?',
+    answer: 'BNI has a thorough vetting process. Each applicant goes through a membership committee review, and existing members can provide feedback. This ensures high-quality, trustworthy professionals join the network.',
+  },
+  {
+    question: 'What is BNI Online®?',
+    answer: 'BNI Online® allows members to participate in chapter meetings virtually. It provides the same structured networking experience with the convenience of meeting from anywhere.',
+  },
+  {
+    question: 'Do ethical rules for certain professions prohibit participation in BNI?',
+    answer: 'BNI is designed to comply with professional ethical standards. Members from regulated professions can participate while adhering to their professional codes of conduct.',
+  },
+];
+
 /* ── Donut Chart Component ──────────────────────────────── */
 
 function DonutChart({ percentage }: { percentage: number }) {
@@ -153,6 +231,9 @@ export default function BNIExperiencePage() {
 
   /* Video modal */
   const [videoPlaying, setVideoPlaying] = useState(false);
+
+  /* FAQ accordion */
+  const [openFAQ, setOpenFAQ] = useState<number | null>(null);
 
   return (
     <>
@@ -358,10 +439,10 @@ export default function BNIExperiencePage() {
                   key={i}
                   onClick={() => { clearInterval(testimonialTimer.current); setActiveTestimonial(i); }}
                   className={`relative rounded-full overflow-hidden transition-all duration-500 ease-out ${isActive
-                      ? 'w-24 h-24 sm:w-28 sm:h-28 lg:w-36 lg:h-36 ring-4 ring-primary shadow-2xl z-20'
-                      : distance === 1
-                        ? 'w-14 h-14 sm:w-16 sm:h-16 lg:w-20 lg:h-20 opacity-70 hover:opacity-90 z-10'
-                        : 'w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 opacity-40 hover:opacity-60'
+                    ? 'w-24 h-24 sm:w-28 sm:h-28 lg:w-36 lg:h-36 ring-4 ring-primary shadow-2xl z-20'
+                    : distance === 1
+                      ? 'w-14 h-14 sm:w-16 sm:h-16 lg:w-20 lg:h-20 opacity-70 hover:opacity-90 z-10'
+                      : 'w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 opacity-40 hover:opacity-60'
                     }`}
                   style={{ marginBottom: isActive ? '0px' : distance === 1 ? '8px' : '16px' }}
                   aria-label={`View testimonial from ${t.name}`}
@@ -491,6 +572,168 @@ export default function BNIExperiencePage() {
               </div>
             </div>
           </motion.div>
+        </Container>
+      </section>
+
+      {/* ── Section 6: Your Path Forward ──────────────── */}
+      <section className="bg-[#f5f5f5] py-20 lg:py-28">
+        <Container>
+          <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 mb-16">
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-4xl font-black text-dark lg:text-5xl"
+            >
+              Your <span className="text-primary italic">Path Forward</span>
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="text-gray-500 max-w-md text-base lg:text-lg"
+            >
+              Attending a BNI meeting is an extraordinary experience and the first step on your journey to activating the power of referrals for your business.
+            </motion.p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-16">
+            {PATH_STEPS.map((step, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.15 }}
+                className="flex flex-col items-center text-center"
+              >
+                <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center text-white text-lg font-bold shadow-lg mb-5">
+                  {step.number}
+                </div>
+                <h3 className="text-xl font-bold text-primary mb-2">{step.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{step.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* ── Section 7: Three Ways to Experience BNI ────────── */}
+      <section className="bg-[#f0f0f0] py-20 lg:py-28">
+        <Container>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-4"
+          >
+            <h2 className="text-4xl font-black text-dark lg:text-5xl">
+              Three Ways <span className="text-primary font-black">to Experience BNI</span>
+            </h2>
+          </motion.div>
+          <motion.p
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="text-center text-gray-500 mb-14 max-w-lg mx-auto"
+          >
+            Enjoy a meeting type that best fits your lifestyle and business.
+          </motion.p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10 items-start">
+            {EXPERIENCE_WAYS.map((way, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.15 }}
+                className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group"
+              >
+                <div className="h-56 overflow-hidden relative">
+                  <img
+                    src={way.image}
+                    alt={way.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-primary mb-2">{way.title}</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">{way.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* ── Section 8: Frequently Asked Questions ─────────── */}
+      <section className="bg-[#f5f5f5] py-20 lg:py-28">
+        <Container>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-4"
+          >
+            <h2 className="text-4xl font-black text-dark lg:text-5xl">
+              Frequently Asked <span className="text-primary">Questions</span>
+            </h2>
+          </motion.div>
+          <motion.p
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="text-center text-gray-400 text-sm mb-14 max-w-lg mx-auto"
+          >
+            Explore answers to frequently asked questions about our organization.
+          </motion.p>
+
+          <div className="max-w-3xl mx-auto">
+            {FAQ_ITEMS.map((faq, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.05 }}
+                className="border-b border-gray-200"
+              >
+                <button
+                  onClick={() => setOpenFAQ(openFAQ === i ? null : i)}
+                  className="flex items-center justify-between w-full py-5 text-left group"
+                >
+                  <span className="text-dark font-medium text-base pr-4">{faq.question}</span>
+                  <span className="shrink-0 text-gray-400 group-hover:text-primary transition-colors">
+                    {openFAQ === i ? (
+                      <ChevronDown className="h-5 w-5 rotate-180 transition-transform duration-300" />
+                    ) : (
+                      <ChevronRight className="h-5 w-5 transition-transform duration-300" />
+                    )}
+                  </span>
+                </button>
+                <AnimatePresence>
+                  {openFAQ === i && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: 'auto', opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.3 }}
+                      className="overflow-hidden"
+                    >
+                      <p className="pb-5 text-gray-500 text-sm leading-relaxed pr-10">
+                        {faq.answer}
+                      </p>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </motion.div>
+            ))}
+          </div>
         </Container>
       </section>
 
