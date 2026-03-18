@@ -67,6 +67,16 @@ export default function MobileNav({ isOpen, onClose }: MobileNavProps) {
                     </div>
                   )}
                 </>
+              ) : item.newTab ? (
+                <a
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={onClose}
+                  className="block rounded-lg px-3 py-3 font-medium text-dark hover:bg-gray-50 hover:text-primary transition-colors"
+                >
+                  {item.label}
+                </a>
               ) : (
                 <NavLink
                   to={item.href ?? '#'}

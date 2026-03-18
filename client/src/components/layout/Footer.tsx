@@ -16,7 +16,7 @@ const COL1 = [
   { label: 'The BNI Experience', href: '/the-bni-experience' },
   { label: 'Our Global Community', href: '/about' },
   { label: 'My BNI Story', href: '/success-stories' },
-  { label: 'BNI Franchising', href: '/start-a-chapter' },
+  { label: 'BNI Franchising', href: '/bni-franchising', newTab: true },
 ];
 
 const COL2_HEADING = 'About Us';
@@ -68,7 +68,11 @@ export default function Footer() {
           <ul className="space-y-3">
             {COL1.map(l => (
               <li key={l.label}>
-                <Link to={l.href} className={`text-sm font-semibold ${TEXT} ${HOVER}`}>{l.label}</Link>
+                {l.newTab ? (
+                  <a href={l.href} target="_blank" rel="noopener noreferrer" className={`text-sm font-semibold ${TEXT} ${HOVER}`}>{l.label}</a>
+                ) : (
+                  <Link to={l.href} className={`text-sm font-semibold ${TEXT} ${HOVER}`}>{l.label}</Link>
+                )}
               </li>
             ))}
           </ul>

@@ -149,6 +149,7 @@ type MegaMenuColumn = { heading?: string; items: MegaMenuLink[] };
 export type NavItem = {
   label: string;
   href: string;
+  newTab?: boolean;
   megaMenu?: { columns: MegaMenuColumn[] };
 };
 
@@ -167,7 +168,8 @@ export const NAV_ITEMS: NavItem[] = [
   },
   {
     label: 'BNI Franchising',
-    href: '/start-a-chapter',
+    href: '/bni-franchising',
+    newTab: true,
   },
   {
     label: 'About BNI',

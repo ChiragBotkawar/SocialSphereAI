@@ -64,6 +64,15 @@ export default function Header() {
                           className={cn('h-4 w-4 transition-transform duration-200', activeDropdown === item.label && 'rotate-180')}
                         />
                       </button>
+                    ) : item.newTab ? (
+                      <a
+                        href={item.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[15px] font-normal text-gray-900 hover:text-primary transition-colors whitespace-nowrap"
+                      >
+                        {item.label}
+                      </a>
                     ) : (
                       <NavLink
                         to={item.href ?? '#'}
