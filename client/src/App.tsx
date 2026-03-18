@@ -19,6 +19,7 @@ const CareersPage = lazy(() => import('./pages/CareersPage'));
 const ContactPage = lazy(() => import('./pages/ContactPage'));
 const CountryPage = lazy(() => import('./pages/CountryPage'));
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
+const FranchisingPage = lazy(() => import('./pages/FranchisingPage'));
 
 function AppRoutes() {
   return (
@@ -30,6 +31,7 @@ function AppRoutes() {
       }
     >
       <Routes>
+        <Route path="/bni-franchising" element={<FranchisingPage />} />
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
           <Route path="about" element={<AboutPage />} />
