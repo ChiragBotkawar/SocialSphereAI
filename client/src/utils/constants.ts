@@ -189,6 +189,7 @@ export const NAV_ITEMS: NavItem[] = [
           heading: 'The Latest',
           items: [
             { label: 'Blog & News', href: '/blog' },
+            { label: 'In The Media', href: '/blog?category=media' },
             { label: 'Networking Tips', href: '/blog?category=networking-tips' },
             { label: 'Global Events', href: '/events' },
             { label: 'Careers', href: '/careers' },
