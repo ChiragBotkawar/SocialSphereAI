@@ -21,10 +21,10 @@ const COL1 = [
 
 const COL2_HEADING = 'About Us';
 const COL2 = [
-  { label: 'Leadership', href: '/about' },
-  { label: 'National Directors', href: '/about' },
-  { label: 'Our Founder', href: '/about' },
-  { label: 'BNI® Foundation', href: '/about' },
+  { label: 'Leadership', href: '/about/leadership' },
+  { label: 'National Directors', href: '/about/national-directors' },
+  { label: 'Our Founder', href: '/about/our-founder' },
+  { label: 'BNI® Foundation', href: '/about/bni-foundation' },
 ];
 
 const COL3_HEADING = 'The Latest';

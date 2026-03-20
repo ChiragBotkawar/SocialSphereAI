@@ -14,6 +14,7 @@ import {
   Users,
   ChevronDown,
 } from 'lucide-react';
+import AboutTabNav from '../components/about/AboutTabNav';
 import CountUp from 'react-countup';
 
 /* Handshake icon with circular arrows */
@@ -40,14 +41,6 @@ function HandshakeIcon({ className }: { className?: string }) {
 /* ═══════════════════════════════════════════════════════════════════════════
    DATA
    ═══════════════════════════════════════════════════════════════════════════ */
-const ABOUT_TABS = [
-  'About Us',
-  'Leadership',
-  'National Directors',
-  'Our Founder',
-  'BNI® Foundation',
-];
-
 const MARQUEE_ITEMS = [
   { type: 'stat' as const, value: '355,000+', label: 'Global Members' },
   { type: 'image' as const, src: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=500&q=80', alt: 'BNI event' },
@@ -131,33 +124,10 @@ const ACCORDION_ITEMS = [
    HERO + TAB NAV
    ═══════════════════════════════════════════════════════════════════════════ */
 function HeroSection() {
-  const [activeTab, setActiveTab] = useState('About Us');
-
   return (
     <section className="bg-white">
       {/* Tab navigation bar */}
-      <div className="bg-[#4A4A4A]">
-        <div className="max-w-[1200px] mx-auto px-6 lg:px-12">
-          <div className="flex items-center overflow-x-auto scrollbar-hide">
-            {ABOUT_TABS.map((tab) => (
-              <button
-                key={tab}
-                onClick={() => setActiveTab(tab)}
-                className={`relative py-4 px-6 lg:px-8 text-[15px] font-medium whitespace-nowrap transition-colors ${
-                  tab === activeTab
-                    ? 'text-white'
-                    : 'text-gray-300 hover:text-white'
-                }`}
-              >
-                {tab}
-                {tab === activeTab && (
-                  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-8 h-[3px] bg-[#E31837] rounded-full" />
-                )}
-              </button>
-            ))}
-          </div>
-        </div>
-      </div>
+      <AboutTabNav />
 
       {/* Hero content */}
       <div className="max-w-[1200px] mx-auto px-6 lg:px-12 pt-14 pb-10">

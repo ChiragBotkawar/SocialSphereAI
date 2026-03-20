@@ -179,10 +179,10 @@ export const NAV_ITEMS: NavItem[] = [
         {
           items: [
             { label: 'About Us', href: '/about' },
-            { label: 'Leadership', href: '/about#leadership' },
-            { label: 'National Directors', href: '/about#directors' },
-            { label: 'Our Founder', href: '/about#founder' },
-            { label: 'BNI® Foundation', href: '/about#foundation' },
+            { label: 'Leadership', href: '/about/leadership' },
+            { label: 'National Directors', href: '/about/national-directors' },
+            { label: 'Our Founder', href: '/about/our-founder' },
+            { label: 'BNI® Foundation', href: '/about/bni-foundation' },
           ],
         },
         {

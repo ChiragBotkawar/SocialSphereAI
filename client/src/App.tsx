@@ -20,6 +20,9 @@ const ContactPage = lazy(() => import('./pages/ContactPage'));
 const CountryPage = lazy(() => import('./pages/CountryPage'));
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
 const FranchisingPage = lazy(() => import('./pages/FranchisingPage'));
+const LeadershipPage = lazy(() => import('./pages/LeadershipPage'));
+const NationalDirectorsPage = lazy(() => import('./pages/NationalDirectorsPage'));
+const OurFounderPage = lazy(() => import('./pages/OurFounderPage'));
 
 function AppRoutes() {
   return (
@@ -35,6 +38,9 @@ function AppRoutes() {
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
           <Route path="about" element={<AboutPage />} />
+          <Route path="about/leadership" element={<LeadershipPage />} />
+          <Route path="about/national-directors" element={<NationalDirectorsPage />} />
+          <Route path="about/our-founder" element={<OurFounderPage />} />
           <Route path="the-bni-experience" element={<BNIExperiencePage />} />
           <Route path="find-a-chapter" element={<FindChapterPage />} />
           <Route path="start-a-chapter" element={<StartChapterPage />} />
