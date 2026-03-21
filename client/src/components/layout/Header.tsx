@@ -34,17 +34,17 @@ export default function Header() {
       >
         <div className="container-bni flex h-[96px] items-center justify-between gap-6">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-1 shrink-0" aria-label="BNI Home">
-            <span className="text-[2.6rem] font-black text-primary tracking-tight leading-none">BNI</span>
+          <Link to="/" className="flex items-center gap-1 shrink-0" aria-label="BWN Home">
+            <span className="text-[2.6rem] font-black text-primary tracking-tight leading-none">BWN</span>
             <span className="text-[2rem] font-black text-primary leading-none pb-1">.</span>
           </Link>
 
-          {/* Desktop nav — pill centered */}
-          <div className="hidden xl:flex items-center flex-1 justify-center">
-            <div className="flex items-center bg-[#F5F5F5] rounded-full px-6 py-3.5">
+          {/* Desktop nav — pill with nav + email + CTA all inside */}
+          <div className="hidden xl:flex items-center flex-1 justify-end">
+            <div className="flex items-center bg-[#F5F5F5] rounded-full px-5 py-3">
 
               {/* Nav links */}
-              <nav className="flex items-center gap-7" role="navigation">
+              <nav className="flex items-center gap-5" role="navigation">
                 {NAV_ITEMS.map((item) => (
                   <div
                     key={item.label}
@@ -130,7 +130,7 @@ export default function Header() {
                           <div className="relative overflow-hidden rounded-lg mb-6" style={{ height: '140px' }}>
                             <img
                               src="https://images.unsplash.com/photo-1499364615650-ec38552f4f34?w=900&q=80"
-                              alt="BNI Global Convention"
+                              alt="BWN Global Convention"
                               className="absolute inset-0 w-full h-full object-cover"
                             />
                             <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/20" />
@@ -142,7 +142,7 @@ export default function Header() {
                                   </div>
                                   <div className="text-white text-xs">
                                     <div className="font-semibold">Experience</div>
-                                    <div>the <strong>2026 BNI Global</strong></div>
+                                    <div>the <strong>2026 BWN Global</strong></div>
                                     <div><strong>Convention</strong> in Monaco!</div>
                                   </div>
                                 </div>
@@ -155,19 +155,19 @@ export default function Header() {
 
                           {/* Social icons */}
                           <div className="flex items-center gap-4 justify-center">
-                            <a href="https://facebook.com/bni" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-primary transition-colors">
+                            <a href="https://facebook.com/BWNGlobal" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-primary transition-colors">
                               <Facebook className="h-5 w-5" />
                             </a>
-                            <a href="https://linkedin.com/company/bni" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-primary transition-colors">
+                            <a href="https://linkedin.com/company/bwn" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-primary transition-colors">
                               <Linkedin className="h-5 w-5" />
                             </a>
-                            <a href="https://instagram.com/bni" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-primary transition-colors">
+                            <a href="https://instagram.com/bwn" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-primary transition-colors">
                               <Instagram className="h-5 w-5" />
                             </a>
-                            <a href="https://youtube.com/bni" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-primary transition-colors">
+                            <a href="https://youtube.com/bwn" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-primary transition-colors">
                               <Youtube className="h-5 w-5" />
                             </a>
-                            <a href="https://twitter.com/bni" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-primary transition-colors">
+                            <a href="https://twitter.com/BWNGlobal" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-primary transition-colors">
                               <Twitter className="h-5 w-5" />
                             </a>
                           </div>
@@ -178,21 +178,25 @@ export default function Header() {
                 ))}
               </nav>
 
+              {/* Divider + Email + CTA inside the pill */}
+              <div className="flex items-center gap-4 ml-5">
+                <a
+                  href="mailto:support@bwn.com"
+                  className="flex items-center gap-1.5 text-primary hover:text-primary-dark transition-colors"
+                >
+                  <Mail className="h-4 w-4" />
+                  <span className="text-[13px] font-medium whitespace-nowrap">support@bwn.com</span>
+                </a>
+              </div>
+
             </div>
           </div>
 
-          {/* Right actions: email + CTA */}
-          <div className="hidden xl:flex items-center gap-5 shrink-0">
-            <a
-              href="mailto:support@bni.com"
-              className="flex items-center gap-2 text-primary hover:text-primary-dark transition-colors"
-            >
-              <Mail className="h-5 w-5" />
-              <span className="text-[15px] font-medium whitespace-nowrap">support@bni.com</span>
-            </a>
+          {/* GET INVITED — outside the pill */}
+          <div className="hidden xl:flex items-center shrink-0">
             <Link
               to="/find-a-chapter"
-              className="inline-flex bg-primary hover:bg-primary-dark text-white font-bold px-6 py-2.5 rounded-full text-sm uppercase tracking-wider transition-colors shadow-md whitespace-nowrap"
+              className="inline-flex bg-primary hover:bg-primary-dark text-white font-bold px-5 py-2.5 rounded-full text-sm uppercase tracking-wider transition-colors shadow-md whitespace-nowrap"
             >
               GET INVITED
             </Link>

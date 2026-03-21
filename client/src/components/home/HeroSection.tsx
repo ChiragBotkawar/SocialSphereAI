@@ -54,7 +54,7 @@ export default function HeroSection() {
             playsInline
             poster="https://images.unsplash.com/photo-1560439514-4e9645039924?w=1800&q=80"
           >
-            {/* <source src="/videos/bni-hero-banner.mp4" type="video/mp4" /> */}
+            {/* <source src="/videos/BWN-hero-banner.mp4" type="video/mp4" /> */}
           </video>
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
 
@@ -114,7 +114,7 @@ export default function HeroSection() {
             >
               <h2 className="text-[2.75rem] font-bold leading-tight lg:text-5xl lg:leading-tight">
                 <span className="text-gray-600">Join </span>
-                <span className="font-black text-primary">BNI®</span>
+                <span className="font-black text-primary">BWN®</span>
                 <span className="text-gray-600">, the world's largest</span>
                 <br />
                 <span className="text-gray-600">and most successful </span>
@@ -133,7 +133,7 @@ export default function HeroSection() {
               className="flex items-center"
             >
               <p className="text-base leading-relaxed text-dark lg:text-lg">
-                Discover how BNI Members around the world meet each week locally
+                Discover how BWN Members around the world meet each week locally
                 to pass millions of referrals to each other worth billions of dollars
                 in revenue for businesses just like yours.
               </p>
@@ -155,7 +155,7 @@ export default function HeroSection() {
                   loop
                   poster="https://images.unsplash.com/photo-1560439514-4e9645039924?w=800&q=80"
                 >
-                  {/* <source src="/videos/what-is-bni.mp4" type="video/mp4" /> */}
+                  {/* <source src="/videos/what-is-BWN.mp4" type="video/mp4" /> */}
                 </video>
                 <div className="absolute inset-0 flex items-center justify-center bg-black/30 transition-colors duration-200 group-hover:bg-black/40">
                   <motion.div

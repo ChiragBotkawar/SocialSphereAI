@@ -34,8 +34,8 @@ export default function CountryPage() {
   return (
     <>
       <Helmet>
-        <title>BNI {country.name} | Chapters & Membership</title>
-        <meta name="description" content={`Discover BNI in ${country.name}. Find local chapters, meet business professionals, and grow your network.`} />
+        <title>BWN {country.name} | Chapters & Membership</title>
+        <meta name="description" content={`Discover BWN in ${country.name}. Find local chapters, meet business professionals, and grow your network.`} />
       </Helmet>
 
       {/* Hero */}
@@ -54,7 +54,7 @@ export default function CountryPage() {
           <div className="flex items-center gap-4 mb-4">
             <span className="text-5xl">{country.flag}</span>
             <div>
-              <h1 className="text-4xl font-black text-white lg:text-5xl">BNI {country.name}</h1>
+              <h1 className="text-4xl font-black text-white lg:text-5xl">BWN {country.name}</h1>
               <p className="text-primary font-medium">{country.region}</p>
             </div>
           </div>
@@ -94,7 +94,7 @@ export default function CountryPage() {
       {chaptersData?.data?.length ? (
         <section className="section-padding bg-light-bg">
           <Container>
-            <SectionTitle eyebrow="Chapters" title={`BNI Chapters in ${country.name}`} />
+            <SectionTitle eyebrow="Chapters" title={`BWN Chapters in ${country.name}`} />
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
               {chaptersData.data.map((ch) => (
                 <div key={ch._id} className="card">

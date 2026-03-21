@@ -2,7 +2,7 @@ import { createContext, useContext, useEffect, useReducer, type ReactNode } from
 import type { AuthState, User, LoginForm, RegisterForm } from '../types';
 import { authService } from '../services/authService';
 
-const TOKEN_KEY = 'bni_token';
+const TOKEN_KEY = 'BWN_token';
 
 // ─── State & Actions ─────────────────────────────────────────────────────────
 type AuthAction =

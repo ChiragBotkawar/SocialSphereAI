@@ -40,8 +40,8 @@ export default function ContactPage() {
   return (
     <>
       <Helmet>
-        <title>Contact BNI | Get in Touch</title>
-        <meta name="description" content="Contact BNI — for general enquiries, membership information, starting a chapter, or media requests." />
+        <title>Contact BWN | Get in Touch</title>
+        <meta name="description" content="Contact BWN — for general enquiries, membership information, starting a chapter, or media requests." />
       </Helmet>
 
       <section className="bg-dark py-16">
@@ -49,7 +49,7 @@ export default function ContactPage() {
           <div className="max-w-xl">
             <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-widest text-primary">Get in Touch</span>
             <h1 className="mb-4 text-4xl font-black text-white">Contact Us</h1>
-            <p className="text-gray-300">Have a question about BNI? We're here to help. Fill in the form and our team will respond within 24 hours.</p>
+            <p className="text-gray-300">Have a question about BWN? We're here to help. Fill in the form and our team will respond within 24 hours.</p>
           </div>
         </Container>
       </section>
@@ -63,7 +63,7 @@ export default function ContactPage() {
               {[
                 { label: 'Global Headquarters', value: '545 College Commerce Way, Upland, CA 91786, USA' },
                 { label: 'Phone', value: '1-800-522-1717' },
-                { label: 'Email', value: 'support@bni.com' },
+                { label: 'Email', value: 'support@BWN.com' },
                 { label: 'Office Hours', value: 'Mon–Fri 8am–5pm PST' },
               ].map((item) => (
                 <div key={item.label}>

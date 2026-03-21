@@ -168,7 +168,7 @@ export type EventType = 'Global Conference' | 'Local Event' | 'Training Event' |
 export type EventFormat = 'In-Person' | 'Online' | 'Hybrid';
 export type EventStatus = 'upcoming' | 'ongoing' | 'completed' | 'cancelled';
 
-export interface BNIEvent {
+export interface BWNEvent {
   _id: string;
   title: string;
   slug: string;

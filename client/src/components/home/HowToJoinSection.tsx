@@ -3,7 +3,7 @@ import { useState } from 'react';
 /* ── Testimonial data ──────────────────────────────────────────────────── */
 const ROW_1 = [
   {
-    quote: 'BNI has been a game changer for my business.',
+    quote: 'BWN has been a game changer for my business.',
     name: 'Manuel Gutierrez',
     company: 'Goper Coma S.L',
     country: 'Spain',
@@ -17,28 +17,28 @@ const ROW_1 = [
     photo: 'https://i.pravatar.cc/80?img=52',
   },
   {
-    quote: 'Today we own a Pvt. Ltd. Firm that has achieved Rs 1.5 Cr in business within 9 months, with 95% of it coming from BNI.',
+    quote: 'Today we own a Pvt. Ltd. Firm that has achieved Rs 1.5 Cr in business within 9 months, with 95% of it coming from BWN.',
     name: 'Bhavesh Vora',
     company: 'Engineering Solutions',
     country: 'India',
     photo: 'https://i.pravatar.cc/80?img=70',
   },
   {
-    quote: 'BNI has shown me how to raise the bar and push my business blueprint to new heights.',
+    quote: 'BWN has shown me how to raise the bar and push my business blueprint to new heights.',
     name: 'Farzana Ahmad',
     company: 'Business Coaching',
     country: 'UAE',
     photo: 'https://i.pravatar.cc/80?img=47',
   },
   {
-    quote: 'The referrals I get through BNI account for over 60% of my annual revenue. It\'s the best investment I\'ve ever made.',
+    quote: 'The referrals I get through BWN account for over 60% of my annual revenue. It\'s the best investment I\'ve ever made.',
     name: 'Priya Mehta',
     company: 'Tech Ventures',
     country: 'Singapore',
     photo: 'https://i.pravatar.cc/80?img=44',
   },
   {
-    quote: 'BNI opened doors I didn\'t even know existed. My network grew threefold in just one year.',
+    quote: 'BWN opened doors I didn\'t even know existed. My network grew threefold in just one year.',
     name: 'Carlos Rivera',
     company: 'Consulting Group',
     country: 'Mexico',
@@ -48,42 +48,42 @@ const ROW_1 = [
 
 const ROW_2 = [
   {
-    quote: 'I highly recommend BNI to every person who is looking to multiply their business connections.',
+    quote: 'I highly recommend BWN to every person who is looking to multiply their business connections.',
     name: 'Jay Patel',
     company: 'Digital Services',
     country: 'USA',
     photo: 'https://i.pravatar.cc/80?img=60',
   },
   {
-    quote: 'BNI expanded my business network and improved communication, boosting credibility and service quality.',
+    quote: 'BWN expanded my business network and improved communication, boosting credibility and service quality.',
     name: 'Juliet Kim',
     company: 'Investment Capital',
     country: 'South Korea',
     photo: 'https://i.pravatar.cc/80?img=23',
   },
   {
-    quote: 'There is no strategy that benefits so many areas in one\'s life than BNI!',
+    quote: 'There is no strategy that benefits so many areas in one\'s life than BWN!',
     name: 'Dr. Aditi Gupta',
     company: 'Healthcare Plus',
     country: 'India',
     photo: 'https://i.pravatar.cc/80?img=39',
   },
   {
-    quote: 'I\'ve shifted my entire business model to one developed via referrals — all with zero competition, thanks to BNI.',
+    quote: 'I\'ve shifted my entire business model to one developed via referrals — all with zero competition, thanks to BWN.',
     name: 'Kurt Braun',
     company: 'Industrial Solutions',
     country: 'Germany',
     photo: 'https://i.pravatar.cc/80?img=20',
   },
   {
-    quote: 'Joining BNI was the single best decision I made for my consulting firm. Revenue doubled in 18 months.',
+    quote: 'Joining BWN was the single best decision I made for my consulting firm. Revenue doubled in 18 months.',
     name: 'Maria Santos',
     company: 'Growth Consulting',
     country: 'Brazil',
     photo: 'https://i.pravatar.cc/80?img=32',
   },
   {
-    quote: 'The accountability and structure of BNI meetings keep me sharp and my pipeline consistently full.',
+    quote: 'The accountability and structure of BWN meetings keep me sharp and my pipeline consistently full.',
     name: 'Sophie Laurent',
     company: 'Marketing Agency',
     country: 'France',

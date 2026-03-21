@@ -10,14 +10,14 @@ import { useQuery } from '@tanstack/react-query';
 import { eventService } from '../services/eventService';
 
 /* ─────────────────────────────────────────────
-   Category tabs matching the BNI site
+   Category tabs matching the BWN site
 ────────────────────────────────────────────── */
 const BLOG_CATEGORIES = [
   'All',
-  'The BNI® Foundation',
+  'The BWN® Foundation',
   'News and Events',
   'Networking Tips',
-  'MY BNI Story',
+  'MY BWN Story',
   'Growing your Business',
   'From the Founder',
   'Chapter Success',
@@ -45,10 +45,10 @@ const BLOG_IMAGES = [
 const DUMMY_FEATURED = [
   {
     _id: 'f1',
-    slug: 'how-much-time-does-bni-take',
-    title: 'How Much Time Does BNI Take?',
+    slug: 'how-much-time-does-BWN-take',
+    title: 'How Much Time Does BWN Take?',
     category: 'Growing your Business',
-    author: 'BNI Global',
+    author: 'BWN Global',
     date: 'March 12, 2026',
     image: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&q=80',
   },
@@ -57,7 +57,7 @@ const DUMMY_FEATURED = [
     slug: 'why-trust-is-the-most-valuable-growth-asset',
     title: 'Why Trust Is the Most Valuable Growth Asset You Can Build',
     category: 'Growing your Business',
-    author: 'BNI Global',
+    author: 'BWN Global',
     date: 'March 09, 2026',
     image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80',
   },
@@ -66,7 +66,7 @@ const DUMMY_FEATURED = [
     slug: 'why-relationships-still-drive-business-growth',
     title: 'Why Relationships Still Drive Business Growth Around the World',
     category: 'Growing your Business',
-    author: 'BNI Global',
+    author: 'BWN Global',
     date: 'February 23, 2026',
     image: 'https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=1200&q=80',
   },
@@ -76,18 +76,18 @@ const DUMMY_FEATURED = [
    Dummy blog cards
 ────────────────────────────────────────────── */
 const DUMMY_BLOGS = [
-  { _id: 'b1', slug: 'how-much-time-does-bni-take', title: 'How Much Time Does BNI Take?', category: 'Growing your Business', author: 'BNI Global', date: 'March 12, 2026', image: BLOG_IMAGES[0] },
-  { _id: 'b2', slug: 'why-trust-is-valuable-growth-asset', title: 'Why Trust Is the Most Valuable Growth Asset You Can Build', category: 'Growing your Business', author: 'BNI Global', date: 'March 09, 2026', image: BLOG_IMAGES[1] },
-  { _id: 'b3', slug: 'why-relationships-drive-business', title: 'Why Relationships Still Drive Business Growth Around the World', category: 'Growing your Business', author: 'BNI Global', date: 'February 23, 2026', image: BLOG_IMAGES[2] },
-  { _id: 'b4', slug: 'why-1-to-1s-are-where-relationships-take-shape', title: 'Why 1-to-1s Are Where Relationships Take Shape in BNI', category: 'Growing your Business', author: 'BNI Global', date: 'February 03, 2026', image: BLOG_IMAGES[3] },
-  { _id: 'b5', slug: 'whats-bni-anyway', title: "What's BNI, Anyway?", category: 'Growing your Business', author: 'BNI Global', date: 'January 23, 2026', image: BLOG_IMAGES[4] },
-  { _id: 'b6', slug: 'power-of-referrals', title: 'The Power of Referrals in Modern Business', category: 'Networking Tips', author: 'BNI Global', date: 'January 15, 2026', image: BLOG_IMAGES[5] },
-  { _id: 'b7', slug: 'building-your-network', title: 'Building Your Network: A Step-by-Step Guide', category: 'Networking Tips', author: 'BNI Global', date: 'January 08, 2026', image: BLOG_IMAGES[6] },
-  { _id: 'b8', slug: 'chapter-success-stories-2025', title: 'Chapter Success Stories from 2025', category: 'Chapter Success', author: 'BNI Global', date: 'December 20, 2025', image: BLOG_IMAGES[7] },
-  { _id: 'b9', slug: 'bni-foundation-year-in-review', title: 'BNI Foundation: Year in Review', category: 'The BNI® Foundation', author: 'BNI Global', date: 'December 10, 2025', image: BLOG_IMAGES[0] },
-  { _id: 'b10', slug: 'networking-tips-for-introverts', title: 'Networking Tips for Introverts', category: 'Networking Tips', author: 'BNI Global', date: 'November 28, 2025', image: BLOG_IMAGES[1] },
-  { _id: 'b11', slug: 'from-the-founder-future-of-bni', title: 'From the Founder: The Future of BNI', category: 'From the Founder', author: 'Dr. Ivan Misner', date: 'November 15, 2025', image: BLOG_IMAGES[2] },
-  { _id: 'b12', slug: 'my-bni-story-transforming-business', title: 'My BNI Story: How Networking Transformed My Business', category: 'MY BNI Story', author: 'BNI Global', date: 'November 05, 2025', image: BLOG_IMAGES[3] },
+  { _id: 'b1', slug: 'how-much-time-does-BWN-take', title: 'How Much Time Does BWN Take?', category: 'Growing your Business', author: 'BWN Global', date: 'March 12, 2026', image: BLOG_IMAGES[0] },
+  { _id: 'b2', slug: 'why-trust-is-valuable-growth-asset', title: 'Why Trust Is the Most Valuable Growth Asset You Can Build', category: 'Growing your Business', author: 'BWN Global', date: 'March 09, 2026', image: BLOG_IMAGES[1] },
+  { _id: 'b3', slug: 'why-relationships-drive-business', title: 'Why Relationships Still Drive Business Growth Around the World', category: 'Growing your Business', author: 'BWN Global', date: 'February 23, 2026', image: BLOG_IMAGES[2] },
+  { _id: 'b4', slug: 'why-1-to-1s-are-where-relationships-take-shape', title: 'Why 1-to-1s Are Where Relationships Take Shape in BWN', category: 'Growing your Business', author: 'BWN Global', date: 'February 03, 2026', image: BLOG_IMAGES[3] },
+  { _id: 'b5', slug: 'whats-BWN-anyway', title: "What's BWN, Anyway?", category: 'Growing your Business', author: 'BWN Global', date: 'January 23, 2026', image: BLOG_IMAGES[4] },
+  { _id: 'b6', slug: 'power-of-referrals', title: 'The Power of Referrals in Modern Business', category: 'Networking Tips', author: 'BWN Global', date: 'January 15, 2026', image: BLOG_IMAGES[5] },
+  { _id: 'b7', slug: 'building-your-network', title: 'Building Your Network: A Step-by-Step Guide', category: 'Networking Tips', author: 'BWN Global', date: 'January 08, 2026', image: BLOG_IMAGES[6] },
+  { _id: 'b8', slug: 'chapter-success-stories-2025', title: 'Chapter Success Stories from 2025', category: 'Chapter Success', author: 'BWN Global', date: 'December 20, 2025', image: BLOG_IMAGES[7] },
+  { _id: 'b9', slug: 'BWN-foundation-year-in-review', title: 'BWN Foundation: Year in Review', category: 'The BWN® Foundation', author: 'BWN Global', date: 'December 10, 2025', image: BLOG_IMAGES[0] },
+  { _id: 'b10', slug: 'networking-tips-for-introverts', title: 'Networking Tips for Introverts', category: 'Networking Tips', author: 'BWN Global', date: 'November 28, 2025', image: BLOG_IMAGES[1] },
+  { _id: 'b11', slug: 'from-the-founder-future-of-BWN', title: 'From the Founder: The Future of BWN', category: 'From the Founder', author: 'Dr. Ivan Misner', date: 'November 15, 2025', image: BLOG_IMAGES[2] },
+  { _id: 'b12', slug: 'my-BWN-story-transforming-business', title: 'My BWN Story: How Networking Transformed My Business', category: 'MY BWN Story', author: 'BWN Global', date: 'November 05, 2025', image: BLOG_IMAGES[3] },
 ];
 
 /* ─────────────────────────────────────────────
@@ -98,7 +98,7 @@ const PRESS_RELEASES = [
     id: '1',
     date: 'October 21, 2025',
     location: '',
-    title: 'BNI® Names Heather McLeod as Chief Marketing Officer, Further Expanding C-Suite Strength in 2025',
+    title: 'BWN® Names Heather McLeod as Chief Marketing Officer, Further Expanding C-Suite Strength in 2025',
   },
   {
     id: '2',
@@ -121,10 +121,10 @@ interface DummyEvent {
 }
 
 const DUMMY_EVENTS: DummyEvent[] = [
-  { id: 'e1', title: 'BNI UAE EXPO 2026', startDate: '2026-04-17', endDate: '2026-04-18', venue: 'Jebel Ali Convention Center', location: 'Dubai, UAE' },
-  { id: 'e2', title: 'BNI JAPAN NATIONAL CONFERENCE 2026', startDate: '2026-04-28', endDate: '2026-04-30', venue: 'Tokyo Big Sight', location: 'Tokyo, Japan' },
-  { id: 'e3', title: 'BNI US & CANADA NATIONAL CONFERENCE 2026', startDate: '2026-04-29', endDate: '2026-05-01', venue: 'Loews Portofino Bay Hotel', location: 'Orlando, USA' },
-  { id: 'e4', title: 'BNI NETHERLANDS & BELGIUM NATIONAL CONFERENCE 2026', startDate: '2026-05-08', endDate: '2026-05-09', venue: 'BMCC', location: 'Amsterdam, Netherlands' },
+  { id: 'e1', title: 'BWN UAE EXPO 2026', startDate: '2026-04-17', endDate: '2026-04-18', venue: 'Jebel Ali Convention Center', location: 'Dubai, UAE' },
+  { id: 'e2', title: 'BWN JAPAN NATIONAL CONFERENCE 2026', startDate: '2026-04-28', endDate: '2026-04-30', venue: 'Tokyo Big Sight', location: 'Tokyo, Japan' },
+  { id: 'e3', title: 'BWN US & CANADA NATIONAL CONFERENCE 2026', startDate: '2026-04-29', endDate: '2026-05-01', venue: 'Loews Portofino Bay Hotel', location: 'Orlando, USA' },
+  { id: 'e4', title: 'BWN NETHERLANDS & BELGIUM NATIONAL CONFERENCE 2026', startDate: '2026-05-08', endDate: '2026-05-09', venue: 'BMCC', location: 'Amsterdam, Netherlands' },
   { id: 'e5', title: 'INTERNATIONAL BUSINESS MATCHING CONFERENCE (IBMC)', startDate: '2026-06-17', endDate: '2026-06-18', venue: 'NPAT, Newport World Resorts', location: 'Pasay Manila, Philippines' },
 ];
 
@@ -177,7 +177,7 @@ export default function BlogPage() {
         slug: p.slug,
         title: p.title,
         category: p.category,
-        author: typeof p.author === 'object' ? `${p.author.firstName} ${p.author.lastName}` : 'BNI Global',
+        author: typeof p.author === 'object' ? `${p.author.firstName} ${p.author.lastName}` : 'BWN Global',
         date: formatDate(p.publishedAt ?? p.createdAt, 'MMMM dd, yyyy'),
         image: p.coverImage || BLOG_IMAGES[0],
       }))
@@ -199,7 +199,7 @@ export default function BlogPage() {
         slug: p.slug,
         title: p.title,
         category: p.category,
-        author: typeof p.author === 'object' ? `${p.author.firstName} ${p.author.lastName}` : 'BNI Global',
+        author: typeof p.author === 'object' ? `${p.author.firstName} ${p.author.lastName}` : 'BWN Global',
         date: formatDate(p.publishedAt ?? p.createdAt, 'MMMM dd, yyyy'),
         image: p.coverImage || BLOG_IMAGES[i % BLOG_IMAGES.length],
       }));
@@ -279,8 +279,8 @@ export default function BlogPage() {
   return (
     <>
       <Helmet>
-        <title>Blog & News | BNI</title>
-        <meta name="description" content="Read BNI's latest articles on business networking, referral marketing, success stories, and professional growth tips." />
+        <title>Blog & News | BWN</title>
+        <meta name="description" content="Read BWN's latest articles on business networking, referral marketing, success stories, and professional growth tips." />
       </Helmet>
 
       {/* ═══════════════════════════════════════════════
@@ -310,9 +310,9 @@ export default function BlogPage() {
                 alt={currentFeatured.title}
                 className="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
-              {/* BNI logo overlay top-left */}
+              {/* BWN logo overlay top-left */}
               <div className="absolute left-6 top-6">
-                <span className="text-2xl font-black text-white drop-shadow-lg tracking-tight">BNI</span>
+                <span className="text-2xl font-black text-white drop-shadow-lg tracking-tight">BWN</span>
                 <span className="text-xl font-black text-white drop-shadow-lg">.</span>
               </div>
               <div className="absolute inset-0 bg-gradient-to-l from-black/60 via-black/20 to-transparent" />
@@ -378,7 +378,7 @@ export default function BlogPage() {
                 <Search className="absolute right-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" />
               </div>
               <p className="text-sm text-gray-600 leading-relaxed">
-                Insights and strategies that help BNI chapters thrive and achieve success
+                Insights and strategies that help BWN chapters thrive and achieve success
               </p>
             </div>
           </div>
@@ -438,11 +438,11 @@ export default function BlogPage() {
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                 {PRESS_RELEASES.slice(pressIdx * 2, pressIdx * 2 + 2).map((pr) => (
                   <div key={pr.id} className="rounded-2xl bg-white shadow-card overflow-hidden">
-                    {/* BNI logo card */}
+                    {/* BWN logo card */}
                     <div className="flex items-center justify-center bg-gray-50 py-12">
                       <div className="text-center">
                         <div>
-                          <span className="text-5xl font-black text-primary tracking-tight">BNI</span>
+                          <span className="text-5xl font-black text-primary tracking-tight">BWN</span>
                           <span className="text-4xl font-black text-primary">.</span>
                         </div>
                         <p className="mt-3 text-xs font-bold uppercase tracking-[0.3em] text-gray-500">P R E S S &nbsp; R E L E A S E</p>
@@ -601,13 +601,13 @@ export default function BlogPage() {
       </section>
 
       {/* ═══════════════════════════════════════════════
-          SECTION 4 — Newsletter (BNI SuccessNet)
+          SECTION 4 — Newsletter (BWN SuccessNet)
          ═══════════════════════════════════════════════ */}
       <section className="bg-white py-12">
         <Container>
           <div className="text-center">
             <h3 className="text-2xl font-black text-primary">
-              BNI SuccessNet<sup className="text-xs">TM</sup>
+              BWN SuccessNet<sup className="text-xs">TM</sup>
             </h3>
             <p className="mt-2 text-gray-600">Sign up for exclusive networking tips and more.</p>
             <form
@@ -638,7 +638,7 @@ export default function BlogPage() {
 }
 
 /* ═══════════════════════════════════════════════
-   Blog Card Component (matches BNI design)
+   Blog Card Component (matches BWN design)
    ═══════════════════════════════════════════════ */
 interface BlogCardData {
   _id: string;
@@ -663,9 +663,9 @@ function BlogCard({ post }: { post: BlogCardData }) {
           alt={post.title}
           className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-300"
         />
-        {/* BNI logo badge top-left */}
+        {/* BWN logo badge top-left */}
         <div className="absolute left-3 top-3">
-          <span className="text-lg font-black text-white drop-shadow-lg tracking-tight">BNI</span>
+          <span className="text-lg font-black text-white drop-shadow-lg tracking-tight">BWN</span>
           <span className="text-base font-black text-white drop-shadow-lg">.</span>
         </div>
       </div>

@@ -6,11 +6,11 @@ export default function Header() {
   const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
 
   const navItems = [
-    { label: 'The BNI Experience', href: '/the-bni-experience' },
+    { label: 'The BWN Experience', href: '/the-bwn-experience' },
     { label: 'Our Global Community', href: '/find-a-chapter' },
-    { label: 'My BNI Story', href: '/success-stories' },
-    { label: 'BNI Franchising', href: '/start-a-chapter' },
-    { label: 'About BNI', href: '/about', hasMegaMenu: true },
+    { label: 'My BWN Story', href: '/success-stories' },
+    { label: 'BWN Franchising', href: '/start-a-chapter' },
+    { label: 'About BWN', href: '/about', hasMegaMenu: true },
   ];
 
   return (
@@ -21,7 +21,7 @@ export default function Header() {
           <a href="/" className="flex items-center">
             <img 
               src="/logo.png" 
-              alt="BNI Logo" 
+              alt="BWN Logo" 
               className="h-[38px]"
               onError={(e) => {
                 e.target.style.display = 'none';
@@ -36,7 +36,7 @@ export default function Header() {
                 <span className="text-xl font-black text-white">B</span>
               </div>
               <span className="text-2xl font-black text-[#222222]">
-                BNI<span className="text-[#d71920]">®</span>
+                BWN<span className="text-[#d71920]">®</span>
               </span>
             </div>
           </a>
@@ -72,11 +72,11 @@ export default function Header() {
         <div className="flex items-center gap-6">
           {/* Email */}
           <a
-            href="mailto:support@bni.com"
+            href="mailto:support@bwn.com"
             className="flex items-center gap-2 text-[#cc0000] hover:text-[#d71920] transition-colors duration-200"
           >
             <Mail className="h-5 w-5" />
-            <span className="text-[15px] font-medium whitespace-nowrap">support@bni.com</span>
+            <span className="text-[15px] font-medium whitespace-nowrap">support@BWN.com</span>
           </a>
 
           {/* CTA Button */}

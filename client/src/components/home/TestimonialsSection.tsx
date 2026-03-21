@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 const steps = [
   {
     number: '1',
-    title: 'Visit a BNI chapter',
-    description: 'and experience the power of the BNI network',
+    title: 'Visit a BWN chapter',
+    description: 'and experience the power of the BWN network',
   },
   {
     number: '2',
@@ -15,7 +15,7 @@ const steps = [
   {
     number: '3',
     title: 'Apply',
-    description: 'to become a Member of a BNI Chapter',
+    description: 'to become a Member of a BWN Chapter',
   },
 ];
 
@@ -55,7 +55,7 @@ export default function TestimonialsSection() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-white/80 text-base lg:text-lg mb-16 max-w-2xl mx-auto"
         >
-          Get invited to a BNI networking meeting and witness the power of referrals in action.
+          Get invited to a BWN networking meeting and witness the power of referrals in action.
         </motion.p>
 
         {/* Steps row */}

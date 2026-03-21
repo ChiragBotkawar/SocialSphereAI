@@ -22,7 +22,7 @@ export default function BlogDetailPage() {
   return (
     <>
       <Helmet>
-        <title>{post.title} | BNI Blog</title>
+        <title>{post.title} | BWN Blog</title>
         <meta name="description" content={post.excerpt} />
         {post.coverImage && <meta property="og:image" content={post.coverImage} />}
       </Helmet>

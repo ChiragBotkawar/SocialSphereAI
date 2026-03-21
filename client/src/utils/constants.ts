@@ -1,7 +1,7 @@
 // ──────────────────────────────────────────────
 // Global Stats (from SRS)
 // ──────────────────────────────────────────────
-export const BNI_STATS = [
+export const BWN_STATS = [
   { value: 355000, suffix: '+', label: 'Members Worldwide', prefix: '' },
   { value: 11600, suffix: '+', label: 'Chapters Globally', prefix: '' },
   { value: 76, suffix: '', label: 'Countries', prefix: '' },
@@ -16,25 +16,25 @@ export const CORE_VALUES = [
   {
     title: 'Givers Gain®',
     description:
-      'The foundational BNI philosophy. By giving business to others, you will get business in return. Generosity is the engine of our referral network.',
+      'The foundational BWN philosophy. By giving business to others, you will get business in return. Generosity is the engine of our referral network.',
     icon: 'Heart',
   },
   {
     title: 'Building Relationships',
     description:
-      'BNI is built on trusted relationships. The know, like, and trust principle drives every referral and every interaction.',
+      'BWN is built on trusted relationships. The know, like, and trust principle drives every referral and every interaction.',
     icon: 'Users',
   },
   {
     title: 'Lifelong Learning',
     description:
-      'Every week, BNI members grow through sharing expertise, attending training programs, and continuously sharpening their business skills.',
+      'Every week, BWN members grow through sharing expertise, attending training programs, and continuously sharpening their business skills.',
     icon: 'BookOpen',
   },
   {
     title: 'Traditions + Innovation',
     description:
-      'BNI honors its proven structure while embracing change. From chapter meetings to the BNI Connect app, we evolve with our members.',
+      'BWN honors its proven structure while embracing change. From chapter meetings to the BWN Connect app, we evolve with our members.',
     icon: 'Lightbulb',
   },
   {
@@ -59,14 +59,14 @@ export const HOW_TO_JOIN_STEPS = [
     step: 1,
     title: 'Find a Chapter',
     description:
-      'Search for a BNI chapter in your city or zip code. Explore chapters near you with our interactive map.',
+      'Search for a BWN chapter in your city or zip code. Explore chapters near you with our interactive map.',
     icon: 'Search',
   },
   {
     step: 2,
     title: 'Visit a Meeting',
     description:
-      'Attend a chapter meeting as a guest — free of charge. Experience BNI first-hand before making any commitment.',
+      'Attend a chapter meeting as a guest — free of charge. Experience BWN first-hand before making any commitment.',
     icon: 'Calendar',
   },
   {
@@ -104,13 +104,13 @@ export const MEMBERSHIP_BENEFITS = [
   {
     title: 'Global Network Access',
     description:
-      'As a BNI member, your network extends to 355,000+ members across 76 countries via BNI Connect.',
+      'As a BWN member, your network extends to 355,000+ members across 76 countries via BWN Connect.',
     icon: 'Globe',
   },
   {
     title: 'Professional Training',
     description:
-      'Access world-class training in networking, presenting, and business development through BNI University.',
+      'Access world-class training in networking, presenting, and business development through BWN University.',
     icon: 'GraduationCap',
   },
   {
@@ -120,7 +120,7 @@ export const MEMBERSHIP_BENEFITS = [
     icon: 'Award',
   },
   {
-    title: 'BNI Connect App',
+    title: 'BWN Connect App',
     description:
       'Manage your network, track referrals, and stay connected with your chapter anytime, anywhere.',
     icon: 'Smartphone',
@@ -128,17 +128,17 @@ export const MEMBERSHIP_BENEFITS = [
 ] as const;
 
 // ──────────────────────────────────────────────
-// BNI History Timeline
+// BWN History Timeline
 // ──────────────────────────────────────────────
-export const BNI_HISTORY = [
-  { year: 1985, event: 'BNI founded by Dr. Ivan Misner in Arcadia, California with the first official chapter.' },
-  { year: 1990, event: 'BNI expands internationally for the first time, establishing chapters in the United Kingdom.' },
+export const BWN_HISTORY = [
+  { year: 1985, event: 'BWN founded by Dr. Ivan Misner in Arcadia, California with the first official chapter.' },
+  { year: 1990, event: 'BWN expands internationally for the first time, establishing chapters in the United Kingdom.' },
   { year: 1998, event: 'Launches in India and Asia Pacific, marking a major expansion milestone.' },
-  { year: 2004, event: 'BNI reaches 100,000 members across multiple continents — a landmark achievement.' },
-  { year: 2012, event: 'Launches BNI Connect, a revolutionary global networking platform for all members.' },
+  { year: 2004, event: 'BWN reaches 100,000 members across multiple continents — a landmark achievement.' },
+  { year: 2012, event: 'Launches BWN Connect, a revolutionary global networking platform for all members.' },
   { year: 2018, event: 'Surpasses 250,000 members worldwide across more than 8,300 chapters.' },
   { year: 2022, event: 'Members generate over $18.4 billion in business revenue — a new all-time record.' },
-  { year: 2024, event: 'BNI reaches 355,000+ members in 11,600+ chapters across 76 countries.' },
+  { year: 2024, event: 'BWN reaches 355,000+ members in 11,600+ chapters across 76 countries.' },
 ] as const;
 
 // ──────────────────────────────────────────────
@@ -155,24 +155,24 @@ export type NavItem = {
 
 export const NAV_ITEMS: NavItem[] = [
   {
-    label: 'The BNI Experience',
-    href: '/the-bni-experience',
+    label: 'The BWN Experience',
+    href: '/the-bwn-experience',
   },
   {
     label: 'Our Global Community',
     href: '/find-a-chapter',
   },
   {
-    label: 'My BNI Story',
+    label: 'My BWN Story',
     href: '/success-stories',
   },
   {
-    label: 'BNI Franchising',
-    href: '/bni-franchising',
+    label: 'BWN Franchising',
+    href: '/bwn-franchising',
     newTab: true,
   },
   {
-    label: 'About BNI',
+    label: 'About BWN',
     href: '/about',
     megaMenu: {
       columns: [
@@ -182,15 +182,15 @@ export const NAV_ITEMS: NavItem[] = [
             { label: 'Leadership', href: '/about/leadership' },
             { label: 'National Directors', href: '/about/national-directors' },
             { label: 'Our Founder', href: '/about/our-founder' },
-            { label: 'BNI® Foundation', href: '/about/bni-foundation' },
+            { label: 'BWN® Foundation', href: '/about/bwn-foundation' },
           ],
         },
         {
           heading: 'The Latest',
           items: [
             { label: 'Blog & News', href: '/blog' },
-            { label: 'In The Media', href: '/blog?category=media' },
-            { label: 'Networking Tips', href: '/blog?category=networking-tips' },
+            { label: 'In The Media', href: '/in-the-media' },
+            { label: 'Networking Tips', href: '/networking-tips' },
             { label: 'Global Events', href: '/events' },
             { label: 'Careers', href: '/careers' },
           ],
@@ -199,7 +199,7 @@ export const NAV_ITEMS: NavItem[] = [
           items: [
             { label: 'Find a Chapter', href: '/find-a-chapter' },
             { label: 'Start a Chapter', href: '/start-a-chapter' },
-            { label: 'Exclusive Member Benefits', href: '/the-bni-experience#benefits' },
+            { label: 'Exclusive Member Benefits', href: '/the-bwn-experience#benefits' },
             { label: 'Contact Us', href: '/contact' },
           ],
         },
@@ -238,8 +238,8 @@ export const INQUIRY_TYPES = [
 // ──────────────────────────────────────────────
 export const FOOTER_LINKS = {
   company: [
-    { label: 'About BNI', href: '/about' },
-    { label: 'The BNI Experience', href: '/the-bni-experience' },
+    { label: 'About BWN', href: '/about' },
+    { label: 'The BWN Experience', href: '/the-bwn-experience' },
     { label: 'Success Stories', href: '/success-stories' },
     { label: 'Careers', href: '/careers' },
     { label: 'Contact', href: '/contact' },
@@ -269,9 +269,9 @@ export const FOOTER_LINKS = {
 // Social Links
 // ──────────────────────────────────────────────
 export const SOCIAL_LINKS = {
-  facebook: 'https://www.facebook.com/BNIGlobal',
-  twitter: 'https://twitter.com/BNIGlobal',
-  linkedin: 'https://www.linkedin.com/company/bni',
-  instagram: 'https://www.instagram.com/bniglobal',
-  youtube: 'https://www.youtube.com/user/BNIVideos',
+  facebook: 'https://www.facebook.com/BWNGlobalGlobal',
+  twitter: 'https://twitter.com/BWNGlobalGlobal',
+  linkedin: 'https://www.linkedin.com/company/bwn',
+  instagram: 'https://www.instagram.com/bwnglobal',
+  youtube: 'https://www.youtube.com/user/BWNVideos',
 } as const;

@@ -1,7 +1,7 @@
 import CountUp from 'react-countup';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { BNI_STATS } from '../../utils/constants';
+import { BWN_STATS } from '../../utils/constants';
 import Container from '../ui/Container';
 
 export default function StatsSection() {
@@ -12,7 +12,7 @@ export default function StatsSection() {
     <section className="bg-primary py-16" ref={ref}>
       <Container>
         <div className="grid grid-cols-2 gap-8 md:grid-cols-5">
-          {BNI_STATS.map((stat) => (
+          {BWN_STATS.map((stat) => (
             <div key={stat.label} className="text-center text-white">
               <p className="text-3xl font-black lg:text-4xl">
                 {stat.prefix}

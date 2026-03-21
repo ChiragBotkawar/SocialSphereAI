@@ -43,11 +43,11 @@ function HandshakeIcon({ className }: { className?: string }) {
    ═══════════════════════════════════════════════════════════════════════════ */
 const MARQUEE_ITEMS = [
   { type: 'stat' as const, value: '355,000+', label: 'Global Members' },
-  { type: 'image' as const, src: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=500&q=80', alt: 'BNI event' },
+  { type: 'image' as const, src: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=500&q=80', alt: 'BWN event' },
   { type: 'stat' as const, value: '17.8M+', label: 'Member Referrals' },
   { type: 'image' as const, src: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=500&q=80', alt: 'Networking' },
   { type: 'stat' as const, value: '$26.5B+', label: 'Member Generated Business' },
-  { type: 'image' as const, src: 'https://images.unsplash.com/photo-1515169067868-5387ec356754?w=500&q=80', alt: 'BNI meeting' },
+  { type: 'image' as const, src: 'https://images.unsplash.com/photo-1515169067868-5387ec356754?w=500&q=80', alt: 'BWN meeting' },
   { type: 'stat' as const, value: '11,600+', label: 'Global Chapters' },
   { type: 'image' as const, src: 'https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=500&q=80', alt: 'Professional event' },
   { type: 'stat' as const, value: '76', label: 'Countries' },
@@ -55,7 +55,7 @@ const MARQUEE_ITEMS = [
 ];
 
 const MISSION_TEXT =
-  'The mission of BNI is to help Members increase their business through a structured, positive and professional referral marketing program that enables them to develop long-term, meaningful relationships with quality business professionals.';
+  'The mission of BWN is to help Members increase their business through a structured, positive and professional referral marketing program that enables them to develop long-term, meaningful relationships with quality business professionals.';
 
 const CORE_VALUES_DATA = [
   {
@@ -104,19 +104,19 @@ const CORE_VALUES_DATA = [
 
 const ACCORDION_ITEMS = [
   {
-    title: 'BNI\u2019s Core Values Start with Givers Gain\u00AE',
+    title: 'BWN\u2019s Core Values Start with Givers Gain\u00AE',
     content:
       'The altruism and goodwill we feel towards one another, and to the world, start with a genuine love of people \u2013 all people, equally. We encourage and embrace diversity in every respect.',
   },
   {
     title: 'Our Statement on Equality and Non-discrimination',
     content:
-      'BNI is committed to creating an inclusive environment where all individuals, regardless of race, gender, religion, sexual orientation, or disability, are treated with dignity and respect. Our network thrives because of the diversity of thought, experience, and perspectives our members bring.',
+      'BWN is committed to creating an inclusive environment where all individuals, regardless of race, gender, religion, sexual orientation, or disability, are treated with dignity and respect. Our network thrives because of the diversity of thought, experience, and perspectives our members bring.',
   },
   {
-    title: 'BNI Does Not Get Involved in Politics, Geopolitics, or Religion',
+    title: 'BWN Does Not Get Involved in Politics, Geopolitics, or Religion',
     content:
-      'BNI is a business networking organization focused solely on helping members grow their businesses through referrals. We do not take positions on political, geopolitical, or religious matters. Our chapters are places of professional collaboration, not political or ideological discourse.',
+      'BWN is a business networking organization focused solely on helping members grow their businesses through referrals. We do not take positions on political, geopolitical, or religious matters. Our chapters are places of professional collaboration, not political or ideological discourse.',
   },
 ];
 
@@ -157,13 +157,13 @@ function HeroSection() {
             className="lg:w-[60%]"
           >
             <p className="text-[15px] text-gray-600 leading-relaxed">
-              Founded by Dr. Ivan Misner in 1985, BNI<sup>&reg;</sup> is now the
+              Founded by Dr. Ivan Misner in 1985, BWN<sup>&reg;</sup> is now the
               world&rsquo;s largest networking organization with 41 years of
               continuous growth.
             </p>
             <p className="mt-3 text-[15px] text-gray-600 leading-relaxed">
               Over the years, hundreds of thousands of Members have unlocked
-              exponential business growth through BNI and the power of referral
+              exponential business growth through BWN and the power of referral
               marketing.
             </p>
           </motion.div>
@@ -178,7 +178,7 @@ function HeroSection() {
         >
           <img
             src="https://images.unsplash.com/photo-1560439514-4e9645039924?w=1400&q=80"
-            alt="BNI global networking event"
+            alt="BWN global networking event"
             className="w-full h-[300px] lg:h-[450px] object-cover"
           />
         </motion.div>
@@ -188,9 +188,9 @@ function HeroSection() {
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
-   HOW BNI HELPS — with infinite marquee
+   HOW BWN HELPS — with infinite marquee
    ═══════════════════════════════════════════════════════════════════════════ */
-function HowBNIHelpsSection() {
+function HowBWNHelpsSection() {
   const [isPaused, setIsPaused] = useState(false);
 
   return (
@@ -200,14 +200,14 @@ function HowBNIHelpsSection() {
         <div className="flex flex-col lg:flex-row items-start gap-10 lg:gap-16">
           <div className="lg:w-[40%]">
             <h2 className="text-[30px] lg:text-[38px] font-bold leading-tight text-dark">
-              How BNI helps
+              How BWN helps
               <br />
               <span className="text-[#E31837] italic">businesses grow</span>
             </h2>
           </div>
           <div className="lg:w-[60%]">
             <p className="text-[15px] text-gray-600 leading-relaxed">
-              A BNI Membership provides the environment, training and support to
+              A BWN Membership provides the environment, training and support to
               build trusted relationships. Members across the globe attend weekly
               Chapter meetings that follow a structured agenda proven to maximize
               referrals.
@@ -438,14 +438,14 @@ function CoreValuesSection() {
               Core <span className="text-[#E31837] italic">Values</span>
             </h2>
             <p className="mt-4 text-[15px] text-gray-600 leading-relaxed max-w-md">
-              BNI is built on a set of guiding principles which form the
+              BWN is built on a set of guiding principles which form the
               foundation on which Members interact, conduct themselves and
               fulfill their goals.
             </p>
           </div>
           <div className="lg:w-[55%]">
             <p className="text-[22px] lg:text-[26px] font-semibold text-dark leading-snug">
-              At BNI, we&rsquo;re{' '}
+              At BWN, we&rsquo;re{' '}
               <span className="font-bold">
                 Changing the Way the World Does Business
               </span>
@@ -599,7 +599,7 @@ function CoreValuesSection() {
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
-   BEGIN YOUR BNI JOURNEY — CTA banner
+   BEGIN YOUR BWN JOURNEY — CTA banner
    ═══════════════════════════════════════════════════════════════════════════ */
 function JourneyCTA() {
   return (
@@ -617,7 +617,7 @@ function JourneyCTA() {
         </div>
         <div className="relative max-w-[800px] mx-auto px-6 lg:px-12 text-center">
           <h2 className="text-[28px] lg:text-[36px] font-bold text-white">
-            Begin Your BNI Journey
+            Begin Your BWN Journey
           </h2>
           <p className="mt-3 text-[15px] text-white/80">
             Want to expand your business and make powerful connections? Get
@@ -700,15 +700,15 @@ export default function AboutPage() {
   return (
     <>
       <Helmet>
-        <title>About BNI | Changing the Way the World Does Business</title>
+        <title>About BWN | Changing the Way the World Does Business</title>
         <meta
           name="description"
-          content="Founded by Dr. Ivan Misner in 1985, BNI is the world's largest networking organization. Learn about our mission, core values, and how we help businesses grow."
+          content="Founded by Dr. Ivan Misner in 1985, BWN is the world's largest networking organization. Learn about our mission, core values, and how we help businesses grow."
         />
       </Helmet>
 
       <HeroSection />
-      <HowBNIHelpsSection />
+      <HowBWNHelpsSection />
       <MissionSection />
       <CoreValuesSection />
       <JourneyCTA />

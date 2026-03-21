@@ -12,20 +12,20 @@ const FOUNDER = {
   title: 'Founder & Chief Visionary Officer',
   image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80',
   bio: [
-    'Dr. Ivan Misner is the Founder & Chief Visionary Officer of BNI\u00AE, the world\u2019s largest business networking organization. Founded in 1985, the organization now has over 11,700+ chapters in 76 countries throughout every populated continent of the world. Last year alone, BNI generated 17.8 million referrals resulting in more than $26.7 billion USD worth of business for its members.',
+    'Dr. Ivan Misner is the Founder & Chief Visionary Officer of BWN\u00AE, the world\u2019s largest business networking organization. Founded in 1985, the organization now has over 11,700+ chapters in 76 countries throughout every populated continent of the world. Last year alone, BWN generated 17.8 million referrals resulting in more than $26.7 billion USD worth of business for its members.',
     'Called the "Father of Modern Networking" by CNN and one of the "Top Networking Experts to Watch" by Forbes, Dr. Misner is considered one of the world\u2019s leading experts on business networking and has been a keynote speaker for major corporations and associations throughout the world.',
     'He has been a columnist for Entrepreneur.com and has written over 27 books including his newest \u2013 Infinite Giving, The 7 Principles of Givers Gain\u00AE and his New York Times bestseller, Masters of Networking.',
-    'He has been the recipient of the John C. Maxwell Transformational Leadership Award. He is the Co-Founder of the BNI Charitable Foundation and is married to Jody Misner. <strong>Oh, and in his spare time!!!</strong> he is also an amateur magician and a black belt in karate.',
+    'He has been the recipient of the John C. Maxwell Transformational Leadership Award. He is the Co-Founder of the BWN Charitable Foundation and is married to Jody Misner. <strong>Oh, and in his spare time!!!</strong> he is also an amateur magician and a black belt in karate.',
   ],
 };
 
 const MARQUEE_IMAGES = [
-  { src: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=500&q=80', alt: 'BNI conference event' },
+  { src: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=500&q=80', alt: 'BWN conference event' },
   { src: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=500&q=80', alt: 'Networking professionals' },
-  { src: 'https://images.unsplash.com/photo-1515169067868-5387ec356754?w=500&q=80', alt: 'BNI chapter meeting' },
+  { src: 'https://images.unsplash.com/photo-1515169067868-5387ec356754?w=500&q=80', alt: 'BWN chapter meeting' },
   { src: 'https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=500&q=80', alt: 'Professional event' },
   { src: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&q=80', alt: 'Team discussion' },
-  { src: 'https://images.unsplash.com/photo-1511578314322-379afb476865?w=500&q=80', alt: 'BNI global gathering' },
+  { src: 'https://images.unsplash.com/photo-1511578314322-379afb476865?w=500&q=80', alt: 'BWN global gathering' },
   { src: 'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=500&q=80', alt: 'Keynote presentation' },
   { src: 'https://images.unsplash.com/photo-1591115765373-5207764f72e7?w=500&q=80', alt: 'Business referrals' },
   { src: 'https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=500&q=80', alt: 'Global conference' },
@@ -147,10 +147,10 @@ export default function OurFounderPage() {
   return (
     <>
       <Helmet>
-        <title>Our Founder — Dr. Ivan Misner | BNI</title>
+        <title>Our Founder — Dr. Ivan Misner | BWN</title>
         <meta
           name="description"
-          content="Meet Dr. Ivan Misner, the Founder & Chief Visionary Officer of BNI — the world's largest business networking organization."
+          content="Meet Dr. Ivan Misner, the Founder & Chief Visionary Officer of BWN — the world's largest business networking organization."
         />
       </Helmet>
 

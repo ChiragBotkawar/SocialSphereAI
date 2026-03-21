@@ -10,10 +10,10 @@ export default function VideoSection() {
     <section className="section-padding bg-dark">
       <Container>
         <div className="text-center mb-10">
-          <span className="mb-2 inline-block text-sm font-semibold uppercase tracking-widest text-primary">The BNI Experience</span>
-          <h2 className="section-title text-white">See What BNI Can Do for You</h2>
+          <span className="mb-2 inline-block text-sm font-semibold uppercase tracking-widest text-primary">The BWN Experience</span>
+          <h2 className="section-title text-white">See What BWN Can Do for You</h2>
           <p className="mt-4 max-w-xl mx-auto text-gray-300">
-            Hear directly from BNI members worldwide about how the power of referrals transformed their businesses.
+            Hear directly from BWN members worldwide about how the power of referrals transformed their businesses.
           </p>
         </div>
 
@@ -26,7 +26,7 @@ export default function VideoSection() {
         >
           <img
             src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200&q=80"
-            alt="BNI Experience video thumbnail"
+            alt="BWN Experience video thumbnail"
             className="w-full h-72 md:h-96 object-cover group-hover:scale-105 transition-transform duration-500"
           />
           <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
@@ -52,7 +52,7 @@ export default function VideoSection() {
                 allow="autoplay; encrypted-media"
                 allowFullScreen
                 className="h-full w-full"
-                title="BNI Experience Video"
+                title="BWN Experience Video"
               />
             </div>
           </div>

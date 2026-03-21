@@ -13,7 +13,7 @@ const CEO = {
   image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80',
   bio: [
     'With more than 30 years in franchising, Mary Kennedy Thompson has led businesses and franchise of all sizes. She has extensive experience in global expansion, high growth organizations, integrations, and leadership.',
-    'Prior to starting at BNI® in 2024, Mary served as Chief Operating Officer at Neighborly®, the world\u2019s largest home services company, where she worked since 2006.',
+    'Prior to starting at BWN® in 2024, Mary served as Chief Operating Officer at Neighborly®, the world\u2019s largest home services company, where she worked since 2006.',
     'Mary\u2019s tenure at Neighborly included roles as Executive Vice President and President of Mr. Rooter®, their largest brand.',
   ],
 };
@@ -247,9 +247,9 @@ function ExecutiveTeamSection() {
             className="lg:w-[60%]"
           >
             <p className="text-[15px] text-gray-600 leading-relaxed">
-              Our Executive Leadership Team leads and executes BNI&rsquo;s
+              Our Executive Leadership Team leads and executes BWN&rsquo;s
               vision. These are passionate individuals who help craft the plan to
-              grow BNI.
+              grow BWN.
             </p>
           </motion.div>
         </div>
@@ -302,8 +302,8 @@ function SenatorsSection() {
             className="lg:w-[60%]"
           >
             <p className="text-[15px] text-gray-600 leading-relaxed">
-              One of BNI&rsquo;s Strategic Advisory Groups, the Senators are an
-              elite group of long-standing, tenured BNI leaders whose passion,
+              One of BWN&rsquo;s Strategic Advisory Groups, the Senators are an
+              elite group of long-standing, tenured BWN leaders whose passion,
               experience and expertise help drive the organization forward.
             </p>
           </motion.div>
@@ -333,10 +333,10 @@ export default function LeadershipPage() {
   return (
     <>
       <Helmet>
-        <title>Leadership | BNI</title>
+        <title>Leadership | BWN</title>
         <meta
           name="description"
-          content="Meet BNI's leadership team including our CEO, executive leadership, and the Senators who guide our global organization."
+          content="Meet BWN's leadership team including our CEO, executive leadership, and the Senators who guide our global organization."
         />
       </Helmet>
 

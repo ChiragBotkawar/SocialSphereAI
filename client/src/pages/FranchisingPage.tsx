@@ -38,25 +38,25 @@ const FRANCHISEE_TESTIMONIALS = [
     quote:
       '\u201CAs a master franchisee you can build a strong community of business owners in your country\u201D',
     photo: 'https://images.unsplash.com/photo-1589156229687-496a31ad1d1f?w=200&q=80',
-    videoTitle: 'BNI Master Franchise - Managing Resour...',
+    videoTitle: 'BWN Master Franchise - Managing Resour...',
     videoThumb: 'https://images.unsplash.com/photo-1573497019236-17f8177b81e8?w=640&q=80',
   },
   {
     name: 'MARCO RODRIGUEZ',
     title: 'Master Franchisee of Mexico',
     quote:
-      '\u201CBNI provided me with a proven system to build and lead a powerful referral network across Latin America\u201D',
+      '\u201CBWN provided me with a proven system to build and lead a powerful referral network across Latin America\u201D',
     photo: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&q=80',
-    videoTitle: 'BNI Master Franchise - Growing Your Net...',
+    videoTitle: 'BWN Master Franchise - Growing Your Net...',
     videoThumb: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=640&q=80',
   },
   {
     name: 'PRIYA SHARMA',
     title: 'Master Franchisee of India',
     quote:
-      '\u201CThe global support from BNI has been instrumental in building thriving chapters across our country\u201D',
+      '\u201CThe global support from BWN has been instrumental in building thriving chapters across our country\u201D',
     photo: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&q=80',
-    videoTitle: 'BNI Master Franchise - Building Communi...',
+    videoTitle: 'BWN Master Franchise - Building Communi...',
     videoThumb: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=640&q=80',
   },
 ];
@@ -65,19 +65,19 @@ const WHY_FRANCHISE_CARDS = [
   {
     title: 'Grow Your Business',
     description:
-      'Our proven business model is designed to help you grow BNI in your country and regions within your country in a structured and positive manner.',
+      'Our proven business model is designed to help you grow BWN in your country and regions within your country in a structured and positive manner.',
     image: 'https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=600&q=80',
   },
   {
     title: 'Build Business Relationships',
     description:
-      'Building a business is hard, but our trusted and experienced Master Franchisees collaborate to help make their BNI experience a rewarding one.',
+      'Building a business is hard, but our trusted and experienced Master Franchisees collaborate to help make their BWN experience a rewarding one.',
     image: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=600&q=80',
   },
   {
     title: 'People Who Care',
     description:
-      "At BNI, you have the power of our Global Support Team to help you grow. We\u2019re always looking for ways to help your business grow and succeed, not just today, but tomorrow and over the years to come.",
+      "At BWN, you have the power of our Global Support Team to help you grow. We\u2019re always looking for ways to help your business grow and succeed, not just today, but tomorrow and over the years to come.",
     image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80',
   },
 ];
@@ -86,7 +86,7 @@ const FRAN_NAV: { label: string; children?: { label: string }[] }[] = [
   {
     label: 'How it works',
     children: [
-      { label: 'Why BNI' },
+      { label: 'Why BWN' },
       { label: 'Getting Started Process' },
       { label: 'Frequently Asked Questions' },
     ],
@@ -135,9 +135,9 @@ function FranchisingHeader() {
 
       <div className="max-w-[1280px] mx-auto flex h-[72px] items-center justify-between px-6 lg:px-10">
         {/* Logo */}
-        <a href="/bni-franchising" className="flex items-center gap-2 shrink-0">
+        <a href="/bwn-franchising" className="flex items-center gap-2 shrink-0">
           <span className="text-[2.2rem] font-black text-[#E31837] tracking-tight leading-none">
-            BNI
+            BWN
           </span>
           <span className="text-gray-300 text-2xl font-light">|</span>
           <span className="text-lg font-medium text-gray-600 tracking-wide">Franchising</span>
@@ -272,7 +272,7 @@ function HeroSection() {
             className="lg:w-[45%] pt-4 lg:pt-8"
           >
             <h1 className="text-[40px] lg:text-[48px] font-bold leading-[1.15] text-dark">
-              Own a Thriving BNI
+              Own a Thriving BWN
               <sup className="text-[20px] lg:text-[24px]">&reg;</sup>
               <br />
               Franchise &amp;{' '}
@@ -308,7 +308,7 @@ function HeroSection() {
               <div className="col-span-6 row-span-3 overflow-hidden rounded-2xl shadow-lg">
                 <img
                   src="https://images.unsplash.com/photo-1515169067868-5387ec356754?w=600&q=80"
-                  alt="BNI networking event"
+                  alt="BWN networking event"
                   className="h-full w-full object-cover"
                 />
               </div>
@@ -324,7 +324,7 @@ function HeroSection() {
               <div className="col-start-5 col-span-4 row-span-3 overflow-hidden rounded-2xl shadow-lg -mt-2">
                 <img
                   src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=600&q=80"
-                  alt="BNI chapter meeting"
+                  alt="BWN chapter meeting"
                   className="h-full w-full object-cover"
                 />
               </div>
@@ -480,9 +480,9 @@ function StatsSection() {
               </span>
             </h2>
             <p className="mt-6 text-[15px] text-gray-600 leading-relaxed max-w-lg">
-              Why do people choose BNI<sup>&reg;</sup>? BNI is the world&rsquo;s leading referral
+              Why do people choose BWN<sup>&reg;</sup>? BWN is the world&rsquo;s leading referral
               networking franchise. It&rsquo;s not just our tools, our people, or our technology
-              &ndash; it&rsquo;s how we have created a roadmap for your business to thrive. BNI is
+              &ndash; it&rsquo;s how we have created a roadmap for your business to thrive. BWN is
               your way forward and as a Master Franchisee, it&rsquo;s like something you&rsquo;ve
               never experienced anywhere else in the world.
             </p>
@@ -490,7 +490,7 @@ function StatsSection() {
               href="#why-franchise"
               className="mt-8 inline-flex items-center gap-2 bg-[#E31837] hover:bg-[#B1122B] text-white font-bold px-8 py-3.5 rounded-full text-sm tracking-wider transition-colors shadow-md uppercase"
             >
-              WHY BNI <ArrowRight className="h-4 w-4" />
+              WHY BWN <ArrowRight className="h-4 w-4" />
             </a>
           </motion.div>
         </div>
@@ -509,7 +509,7 @@ function WhyFranchiseSection() {
         {/* Heading */}
         <div className="text-center mb-14">
           <h2 className="text-[32px] lg:text-[40px] font-bold text-dark">
-            Why Franchise <span className="text-[#E31837]">with BNI?</span>
+            Why Franchise <span className="text-[#E31837]">with BWN?</span>
           </h2>
           <div className="mt-4 mx-auto w-16 h-1 bg-[#E31837] rounded-full" />
         </div>
@@ -594,8 +594,8 @@ function TestimonialsSection() {
           </div>
           <div className="lg:w-[55%]">
             <p className="text-[15px] text-gray-600 leading-relaxed max-w-xl">
-              Many people are unsure if they should franchise. Hear why many have chosen BNI as
-              their franchisor of choice and what it means to be part of the BNI family.
+              Many people are unsure if they should franchise. Hear why many have chosen BWN as
+              their franchisor of choice and what it means to be part of the BWN family.
             </p>
           </div>
         </div>
@@ -610,11 +610,11 @@ function TestimonialsSection() {
                 alt={slide.videoTitle}
                 className="absolute inset-0 w-full h-full object-cover opacity-80"
               />
-              {/* BNI tv badge */}
+              {/* BWN tv badge */}
               <div className="absolute top-4 left-4 flex items-center gap-2 z-10">
                 <div className="bg-white rounded-full w-9 h-9 flex items-center justify-center shadow">
                   <span className="text-[10px] font-black text-[#E31837] leading-none">
-                    BNi
+                    BWN
                     <br />
                     <span className="text-[7px] text-gray-600">tv</span>
                   </span>
@@ -731,7 +731,7 @@ function ResourcesSection() {
             </h2>
             <p className="mt-6 text-[15px] text-gray-600 leading-relaxed max-w-md">
               We offer a full suite of resources and support to help you be successful in every
-              aspect of your BNI business, led by BNI Connect and BNI Business Builder.
+              aspect of your BWN business, led by BWN Connect and BWN Business Builder.
             </p>
             <a
               href="#connect"
@@ -752,7 +752,7 @@ function ResourcesSection() {
             <div className="rounded-2xl overflow-hidden shadow-xl">
               <img
                 src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=700&q=80"
-                alt="BNI resources and support"
+                alt="BWN resources and support"
                 className="w-full h-[320px] lg:h-[380px] object-cover"
               />
             </div>
@@ -786,7 +786,7 @@ function CTASection() {
           {/* Left text */}
           <div className="lg:w-[50%] lg:border-r lg:border-white/30 lg:pr-10">
             <h3 className="text-[24px] lg:text-[30px] font-bold text-white leading-tight">
-              Is a BNI Master Franchise
+              Is a BWN Master Franchise
               <br />
               for You?
             </h3>
@@ -797,10 +797,10 @@ function CTASection() {
           {/* Right CTA */}
           <div className="lg:w-[50%] lg:pl-10">
             <p className="text-[17px] font-semibold text-white">
-              email: franchise@bni.com
+              email: franchise@bwn.com
             </p>
             <a
-              href="mailto:franchise@bni.com"
+              href="mailto:franchise@bwn.com"
               className="mt-5 inline-flex items-center gap-2 bg-white text-[#E31837] font-bold px-8 py-3.5 rounded-full text-sm tracking-wider hover:bg-gray-100 transition-colors shadow-md uppercase"
             >
               LET&rsquo;S CONNECT <ArrowRight className="h-4 w-4" />
@@ -847,9 +847,9 @@ function FranchisingFooter() {
                 <br />
                 INFORMATION CONTACT:
               </h4>
-              <p className="text-[14px] text-white/85 mb-4">franchise@bni.com</p>
+              <p className="text-[14px] text-white/85 mb-4">franchise@bwn.com</p>
               <a
-                href="mailto:franchise@bni.com"
+                href="mailto:franchise@bwn.com"
                 className="inline-flex items-center gap-2 border-2 border-white text-white font-bold px-6 py-2.5 rounded-full text-xs tracking-wider hover:bg-white hover:text-[#E31837] transition-colors uppercase"
               >
                 TALK TO US <ArrowRight className="h-3.5 w-3.5" />
@@ -898,7 +898,7 @@ function FranchisingFooter() {
                 ))}
               </ul>
               <p className="mt-8 text-[12px] text-white/60">
-                &copy;2026 &ndash; BNI Global, LLC. All rights reserved.
+                &copy;2026 &ndash; BWN Global, LLC. All rights reserved.
               </p>
             </div>
           </div>
@@ -926,10 +926,10 @@ export default function FranchisingPage() {
   return (
     <>
       <Helmet>
-        <title>BNI Franchising — Own a Thriving BNI® Franchise</title>
+        <title>BWN Franchising — Own a Thriving BWN® Franchise</title>
         <meta
           name="description"
-          content="Own a thriving BNI® franchise and empower local businesses. Build a powerful networking community while growing your business. Apply now."
+          content="Own a thriving BWN® franchise and empower local businesses. Build a powerful networking community while growing your business. Apply now."
         />
       </Helmet>
 

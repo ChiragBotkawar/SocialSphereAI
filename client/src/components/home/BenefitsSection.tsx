@@ -19,7 +19,7 @@ export default function BenefitsSection() {
             <div className="relative rounded-2xl overflow-hidden shadow-xl">
               <img
                 src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80"
-                alt="BNI members networking"
+                alt="BWN members networking"
                 className="w-full h-96 object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-dark/50 to-transparent" />
@@ -40,7 +40,7 @@ export default function BenefitsSection() {
             <SectionTitle
               eyebrow="Member Benefits"
               title="Everything You Need to Grow"
-              subtitle="BNI membership gives you a structured, supportive network that delivers results."
+              subtitle="BWN membership gives you a structured, supportive network that delivers results."
               centered={false}
             />
             <ul className="space-y-4">

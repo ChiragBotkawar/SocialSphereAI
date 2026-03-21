@@ -56,8 +56,8 @@ export default function FindChapterPage() {
   return (
     <>
       <Helmet>
-        <title>Find a BNI Chapter | Search Chapters Near You</title>
-        <meta name="description" content="Search for BNI chapters near you. Find meeting times, locations, and request a visit as a guest." />
+        <title>Find a BWN Chapter | Search Chapters Near You</title>
+        <meta name="description" content="Search for BWN chapters near you. Find meeting times, locations, and request a visit as a guest." />
       </Helmet>
 
       {/* Hero */}

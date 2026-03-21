@@ -22,14 +22,14 @@ export default function CareersPage() {
   return (
     <>
       <Helmet>
-        <title>Careers at BNI | Join Our Team</title>
-        <meta name="description" content="Explore career opportunities at BNI. Join a global team helping business professionals connect and grow worldwide." />
+        <title>Careers at BWN | Join Our Team</title>
+        <meta name="description" content="Explore career opportunities at BWN. Join a global team helping business professionals connect and grow worldwide." />
       </Helmet>
 
       <section className="bg-dark py-16">
         <Container>
           <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-widest text-primary">Careers</span>
-          <h1 className="text-4xl font-black text-white lg:text-5xl">Join the BNI Team</h1>
+          <h1 className="text-4xl font-black text-white lg:text-5xl">Join the BWN Team</h1>
           <p className="mt-4 max-w-xl text-gray-300">Help us empower business professionals across the world. Explore our open positions.</p>
         </Container>
       </section>
@@ -37,7 +37,7 @@ export default function CareersPage() {
       {/* Why work here */}
       <section className="section-padding bg-white">
         <Container>
-          <SectionTitle eyebrow="Culture & Benefits" title="Why Work at BNI" />
+          <SectionTitle eyebrow="Culture & Benefits" title="Why Work at BWN" />
           <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
             {[
               { title: 'Global Impact', desc: 'Help millions of businesses grow worldwide' },

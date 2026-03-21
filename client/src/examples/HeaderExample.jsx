@@ -1,7 +1,7 @@
 import NewHeader from '../components/layout/NewHeader';
 
 /**
- * Example usage of the BNI Header component
+ * Example usage of the BWN Header component
  * 
  * This demonstrates how to integrate the header into your application.
  * The header is fully self-contained and requires no additional props.
@@ -17,7 +17,7 @@ function App() {
       <main className="mx-auto py-12" style={{ maxWidth: '1240px', paddingLeft: '24px', paddingRight: '24px' }}>
         <div className="bg-white rounded-lg shadow-md p-8">
           <h1 className="text-4xl font-bold text-[#222222] mb-4">
-            Welcome to BNI
+            Welcome to BWN
           </h1>
           <p className="text-lg text-gray-600 mb-6">
             The world's largest and most successful referral networking organization.
@@ -47,7 +47,7 @@ function App() {
             <ul className="space-y-3 text-gray-600">
               <li className="flex items-start">
                 <span className="text-[#d71920] font-bold mr-2">1.</span>
-                <span>Join a local BNI chapter in your area</span>
+                <span>Join a local BWN chapter in your area</span>
               </li>
               <li className="flex items-start">
                 <span className="text-[#d71920] font-bold mr-2">2.</span>
@@ -95,7 +95,7 @@ function App() {
       <footer className="bg-[#222222] text-white py-8 mt-12">
         <div className="mx-auto text-center" style={{ maxWidth: '1240px', paddingLeft: '24px', paddingRight: '24px' }}>
           <p className="text-sm text-gray-400">
-            © 2026 BNI. All rights reserved.
+            © 2026 BWN. All rights reserved.
           </p>
         </div>
       </footer>

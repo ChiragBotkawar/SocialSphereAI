@@ -26,8 +26,8 @@ export default function GlobalPresenceSection() {
       <Container>
         <SectionTitle
           eyebrow="Global Presence"
-          title="BNI Around the World"
-          subtitle="Operating in 76+ countries with thousands of active chapters, BNI connects business professionals globally."
+          title="BWN Around the World"
+          subtitle="Operating in 76+ countries with thousands of active chapters, BWN connects business professionals globally."
         />
 
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">

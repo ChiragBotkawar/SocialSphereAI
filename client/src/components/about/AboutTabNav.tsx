@@ -5,7 +5,7 @@ const ABOUT_TABS = [
   { label: 'Leadership', path: '/about/leadership' },
   { label: 'National Directors', path: '/about/national-directors' },
   { label: 'Our Founder', path: '/about/our-founder' },
-  { label: 'BNI® Foundation', path: '/about/bni-foundation' },
+  { label: 'BWN® Foundation', path: '/about/bwn-foundation' },
 ];
 
 export default function AboutTabNav() {

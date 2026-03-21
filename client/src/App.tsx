@@ -8,7 +8,7 @@ import Spinner from './components/ui/Spinner';
 
 const HomePage = lazy(() => import('./pages/HomePage'));
 const AboutPage = lazy(() => import('./pages/AboutPage'));
-const BNIExperiencePage = lazy(() => import('./pages/BNIExperiencePage'));
+const BWNExperiencePage = lazy(() => import('./pages/BWNExperiencePage'));
 const FindChapterPage = lazy(() => import('./pages/FindChapterPage'));
 const StartChapterPage = lazy(() => import('./pages/StartChapterPage'));
 const EventsPage = lazy(() => import('./pages/EventsPage'));
@@ -23,6 +23,8 @@ const FranchisingPage = lazy(() => import('./pages/FranchisingPage'));
 const LeadershipPage = lazy(() => import('./pages/LeadershipPage'));
 const NationalDirectorsPage = lazy(() => import('./pages/NationalDirectorsPage'));
 const OurFounderPage = lazy(() => import('./pages/OurFounderPage'));
+const InTheMediaPage = lazy(() => import('./pages/InTheMediaPage'));
+const NetworkingTipsPage = lazy(() => import('./pages/NetworkingTipsPage'));
 
 function AppRoutes() {
   return (
@@ -34,14 +36,16 @@ function AppRoutes() {
       }
     >
       <Routes>
-        <Route path="/bni-franchising" element={<FranchisingPage />} />
+        <Route path="/bwn-franchising" element={<FranchisingPage />} />
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
           <Route path="about" element={<AboutPage />} />
           <Route path="about/leadership" element={<LeadershipPage />} />
           <Route path="about/national-directors" element={<NationalDirectorsPage />} />
           <Route path="about/our-founder" element={<OurFounderPage />} />
-          <Route path="the-bni-experience" element={<BNIExperiencePage />} />
+          <Route path="in-the-media" element={<InTheMediaPage />} />
+          <Route path="networking-tips" element={<NetworkingTipsPage />} />
+          <Route path="the-bwn-experience" element={<BWNExperiencePage />} />
           <Route path="find-a-chapter" element={<FindChapterPage />} />
           <Route path="start-a-chapter" element={<StartChapterPage />} />
           <Route path="events" element={<EventsPage />} />

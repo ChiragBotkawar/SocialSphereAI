@@ -11,12 +11,12 @@ const ICON_MAP: Record<string, React.ComponentType<LucideProps>> = {
 const stagger = { hidden: {}, visible: { transition: { staggerChildren: 0.1 } } };
 const item = { hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5 } } };
 
-export default function WhyBNISection() {
+export default function WhyBWNSection() {
   return (
     <section className="section-padding bg-light-bg">
       <Container>
         <SectionTitle
-          eyebrow="Why BNI"
+          eyebrow="Why BWN"
           title="Built on a Foundation of Giving"
           subtitle="Our philosophy of Givers Gain® — what you give to others, you receive in return — has powered the growth of millions of businesses worldwide."
         />

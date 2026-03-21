@@ -13,10 +13,10 @@ function XIcon({ className }: { className?: string }) {
 
 /* ── Column data ─────────────────────────────────────────────────────────── */
 const COL1 = [
-  { label: 'The BNI Experience', href: '/the-bni-experience' },
+  { label: 'The BWN Experience', href: '/the-bwn-experience' },
   { label: 'Our Global Community', href: '/about' },
-  { label: 'My BNI Story', href: '/success-stories' },
-  { label: 'BNI Franchising', href: '/bni-franchising', newTab: true },
+  { label: 'My BWN Story', href: '/success-stories' },
+  { label: 'BWN Franchising', href: '/bwn-franchising', newTab: true },
 ];
 
 const COL2_HEADING = 'About Us';
@@ -24,13 +24,13 @@ const COL2 = [
   { label: 'Leadership', href: '/about/leadership' },
   { label: 'National Directors', href: '/about/national-directors' },
   { label: 'Our Founder', href: '/about/our-founder' },
-  { label: 'BNI® Foundation', href: '/about/bni-foundation' },
+  { label: 'BWN® Foundation', href: '/about/bwn-foundation' },
 ];
 
-const COL3_HEADING = 'The Latest';
+const COL3_HEADING = 'Blog & News';
 const COL3 = [
-  { label: 'Blog & News', href: '/blog' },
-  { label: 'Networking Tips', href: '/blog' },
+  { label: 'In The Media', href: '/in-the-media' },
+  { label: 'Networking Tips', href: '/networking-tips' },
   { label: 'Global Events', href: '/events' },
   { label: 'Careers', href: '/careers' },
 ];
@@ -44,11 +44,11 @@ const COL4 = [
 
 const COL5_HEADING = 'Member Services';
 const COL5 = [
-  { label: 'BNI Connect', href: '#' },
-  { label: 'BNI Business Builder', href: '#' },
-  { label: 'BNI Brandshare', href: '#' },
-  { label: 'BNI US Store', href: '#' },
-  { label: 'BNI Global Store', href: '#' },
+  { label: 'BWN Connect', href: '#' },
+  { label: 'BWN Academy', href: '#' },
+  { label: 'BWN Brandshare', href: '#' },
+  { label: 'BWN US Store', href: '#' },
+  { label: 'BWN Global Store', href: '#' },
 ];
 
 const BG = '#6B6B6B';
@@ -135,7 +135,7 @@ export default function Footer() {
               <Mail className="h-4 w-4 mt-0.5 shrink-0 text-gray-300" />
               <div>
                 <p className="text-sm text-gray-200 font-medium">Outside U.S.</p>
-                <a href="mailto:support@bni.com" className={`text-sm text-gray-300 ${HOVER}`}>support@bni.com</a>
+                <a href="mailto:support@bwn.com" className={`text-sm text-gray-300 ${HOVER}`}>support@bwn.com</a>
               </div>
             </div>
             <div className="flex items-start gap-2.5">
@@ -157,7 +157,7 @@ export default function Footer() {
             {/* Left: SuccessNet blurb */}
             <div className="shrink-0">
               <p className="text-base font-black text-white tracking-tight">
-                BNI SuccessNet<sup className="text-xs">TM</sup>
+                BWN SuccessNet<sup className="text-xs">TM</sup>
               </p>
               <p className="mt-0.5 text-xs text-gray-300">Sign up for exclusive networking tips and more.</p>
             </div>
@@ -186,25 +186,39 @@ export default function Footer() {
               </button>
             </form>
 
-            {/* Right: Follow BNI + socials */}
+            {/* Right: Follow BWN + socials */}
             <div className="flex items-center gap-4 shrink-0">
-              <span className="text-sm font-semibold text-white whitespace-nowrap">Follow BNI</span>
-              <a href="https://www.facebook.com/BNIGlobal" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className={`text-gray-300 ${HOVER}`}>
+              <span className="text-sm font-semibold text-white whitespace-nowrap">Follow BWN</span>
+              <a href="https://www.facebook.com/BWNGlobal" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className={`text-gray-300 ${HOVER}`}>
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="https://www.linkedin.com/company/bni" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className={`text-gray-300 ${HOVER}`}>
+              <a href="https://www.linkedin.com/company/bwn" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className={`text-gray-300 ${HOVER}`}>
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a href="https://www.instagram.com/bniglobal" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className={`text-gray-300 ${HOVER}`}>
+              <a href="https://www.instagram.com/bwnglobal" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className={`text-gray-300 ${HOVER}`}>
                 <Instagram className="h-5 w-5" />
               </a>
-              <a href="https://www.youtube.com/user/BNIVideos" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className={`text-gray-300 ${HOVER}`}>
+              <a href="https://www.youtube.com/user/BWNVideos" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className={`text-gray-300 ${HOVER}`}>
                 <Youtube className="h-5 w-5" />
               </a>
-              <a href="https://twitter.com/BNIGlobal" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" className={`text-gray-300 ${HOVER}`}>
+              <a href="https://twitter.com/BWNGlobal" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" className={`text-gray-300 ${HOVER}`}>
                 <XIcon className="h-5 w-5" />
               </a>
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* ── Very bottom bar — legal links + copyright ──────────────────── */}
+      <div style={{ backgroundColor: '#5E5E5E' }} className="border-t border-white/10">
+        <div className="container-bni py-4">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <div className="flex items-center gap-6">
+              <a href="/cookies" className="text-xs text-gray-400 hover:text-white transition-colors">Cookie Policy</a>
+              <a href="/privacy" className="text-xs text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
+              <a href="/terms" className="text-xs text-gray-400 hover:text-white transition-colors">Terms and Conditions</a>
+            </div>
+            <p className="text-xs text-gray-400">&copy; 2026 BWN Global, LLC</p>
           </div>
         </div>
       </div>

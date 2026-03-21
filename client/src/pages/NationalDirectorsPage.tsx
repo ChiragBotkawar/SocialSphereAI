@@ -102,8 +102,8 @@ function HeroSection() {
             <p className="text-[15px] text-gray-600 leading-relaxed">
               Our National Directors are passionate, purpose-driven leaders in
               their respective countries. Committed to creating thriving business
-              communities, upholding BNI&rsquo;s Core Values and Vision, and
-              helping generate business for every BNI Member. This is both a
+              communities, upholding BWN&rsquo;s Core Values and Vision, and
+              helping generate business for every BWN Member. This is both a
               responsibility and a privilege.
             </p>
           </motion.div>
@@ -118,7 +118,7 @@ function HeroSection() {
         >
           <img
             src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=1400&q=80"
-            alt="BNI National Directors group photo"
+            alt="BWN National Directors group photo"
             className="w-full h-[280px] lg:h-[450px] object-cover"
           />
         </motion.div>
@@ -241,10 +241,10 @@ export default function NationalDirectorsPage() {
   return (
     <>
       <Helmet>
-        <title>National Directors | BNI</title>
+        <title>National Directors | BWN</title>
         <meta
           name="description"
-          content="Meet BNI's National Directors — passionate, purpose-driven leaders committed to creating thriving business communities worldwide."
+          content="Meet BWN's National Directors — passionate, purpose-driven leaders committed to creating thriving business communities worldwide."
         />
       </Helmet>
 

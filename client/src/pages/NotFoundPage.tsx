@@ -5,7 +5,7 @@ import { Home, Search } from 'lucide-react';
 export default function NotFoundPage() {
   return (
     <>
-      <Helmet><title>404 — Page Not Found | BNI</title></Helmet>
+      <Helmet><title>404 — Page Not Found | BWN</title></Helmet>
       <div className="flex min-h-[70vh] flex-col items-center justify-center gap-6 px-4 text-center">
         <div className="flex h-24 w-24 items-center justify-center rounded-full bg-primary/10">
           <span className="text-5xl font-black text-primary">404</span>

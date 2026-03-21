@@ -22,7 +22,7 @@ const BENEFITS = [
   },
   {
     title: 'Become a Leader in Your Community',
-    description: 'Build your career through BNI with opportunities for learning and growth into leadership roles.',
+    description: 'Build your career through BWN with opportunities for learning and growth into leadership roles.',
     image: 'https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=800&q=80',
     icon: Award,
   },
@@ -40,19 +40,19 @@ const BENEFITS = [
   },
   {
     title: 'World-Class Training',
-    description: 'Access BNI University with 200+ courses, business builder programs, and regional conferences to sharpen your skills.',
+    description: 'Access BWN University with 200+ courses, business builder programs, and regional conferences to sharpen your skills.',
     image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80',
     icon: Globe,
   },
   {
     title: 'Proven Referral System',
-    description: 'BNI\'s structured weekly meetings and accountability framework consistently generate qualified warm referrals.',
+    description: 'BWN\'s structured weekly meetings and accountability framework consistently generate qualified warm referrals.',
     image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&q=80',
     icon: Award,
   },
   {
     title: 'Lifelong Relationships',
-    description: 'Build trusted partnerships that extend beyond business — BNI members become your allies for life.',
+    description: 'Build trusted partnerships that extend beyond business — BWN members become your allies for life.',
     image: 'https://images.unsplash.com/photo-1543269865-cbf427effbad?w=800&q=80',
     icon: Users,
   },
@@ -63,28 +63,28 @@ const TESTIMONIALS = [
     name: 'Yusuf Ziya Nisanoğlu',
     country: 'Turkey',
     role: 'Ticari Gayrimenkul Uzmanı',
-    quote: "Kazancımın %40'ını BNI ile elde ediyorum",
+    quote: "Kazancımın %40'ını BWN ile elde ediyorum",
     image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80',
   },
   {
     name: 'Sarah Chen',
     country: 'Singapore',
     role: 'Digital Marketing Director',
-    quote: 'BNI transformed my business within the first year — my referrals increased by 300%.',
+    quote: 'BWN transformed my business within the first year — my referrals increased by 300%.',
     image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80',
   },
   {
     name: 'Carlos Mendez',
     country: 'Mexico',
     role: 'Arquitecto Senior',
-    quote: 'Las conexiones que he hecho en BNI son invaluables para mi crecimiento profesional.',
+    quote: 'Las conexiones que he hecho en BWN son invaluables para mi crecimiento profesional.',
     image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80',
   },
   {
     name: 'Emma Thompson',
     country: 'United Kingdom',
     role: 'Financial Consultant',
-    quote: 'BNI gave me the structured networking I needed to scale my consulting practice.',
+    quote: 'BWN gave me the structured networking I needed to scale my consulting practice.',
     image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80',
   },
   {
@@ -99,8 +99,8 @@ const TESTIMONIALS = [
 const PATH_STEPS = [
   {
     number: '01',
-    title: 'Visit A BNI Chapter',
-    description: 'and experience the power of the BNI network',
+    title: 'Visit A BWN Chapter',
+    description: 'and experience the power of the BWN network',
   },
   {
     number: '02',
@@ -110,25 +110,25 @@ const PATH_STEPS = [
   {
     number: '03',
     title: 'Apply',
-    description: 'to become a member of BNI chapter',
+    description: 'to become a member of BWN chapter',
   },
 ];
 
 const EXPERIENCE_WAYS = [
   {
-    title: 'BNI In-Person',
+    title: 'BWN In-Person',
     description: 'A very personal way to meet, connect and grow.',
     image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80',
     icon: UsersRound,
   },
   {
-    title: 'BNI Hybrid',
+    title: 'BWN Hybrid',
     description: 'The best of both. Meet in-person first week of the month and the rest online.',
     image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80',
     icon: Users,
   },
   {
-    title: 'BNI® Online',
+    title: 'BWN® Online',
     description: 'A convenient way to meet, connect and grow from the comfort of your home or office.',
     image: 'https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?w=600&q=80',
     icon: Laptop,
@@ -138,39 +138,39 @@ const EXPERIENCE_WAYS = [
 const FAQ_ITEMS = [
   {
     question: 'How do I find a Chapter?',
-    answer: 'You can find a BNI chapter near you by using our Find a Chapter tool on our website. Simply enter your location to see available chapters in your area.',
+    answer: 'You can find a BWN chapter near you by using our Find a Chapter tool on our website. Simply enter your location to see available chapters in your area.',
   },
   {
     question: 'How do I join a Chapter?',
-    answer: 'To join a BNI chapter, start by visiting a chapter meeting as a guest. After your visit, you can submit an application. A membership committee will review your application and profession availability.',
+    answer: 'To join a BWN chapter, start by visiting a chapter meeting as a guest. After your visit, you can submit an application. A membership committee will review your application and profession availability.',
   },
   {
     question: 'How do I get an application, and can I apply online?',
-    answer: 'You can get an application from the chapter you wish to join or apply online through the BNI website. Visit the chapter page and click on the apply button to start the process.',
+    answer: 'You can get an application from the chapter you wish to join or apply online through the BWN website. Visit the chapter page and click on the apply button to start the process.',
   },
   {
     question: 'What occupation benefits the most from networking?',
-    answer: 'Every occupation can benefit from networking! BNI members come from all industries including financial services, real estate, IT, marketing, healthcare, legal services, and many more.',
+    answer: 'Every occupation can benefit from networking! BWN members come from all industries including financial services, real estate, IT, marketing, healthcare, legal services, and many more.',
   },
   {
     question: 'Do new Members need to be sponsored to join?',
-    answer: 'Yes, new members typically need a sponsor who is an existing BNI member. Your sponsor helps introduce you to the chapter and guides you through the membership process.',
+    answer: 'Yes, new members typically need a sponsor who is an existing BWN member. Your sponsor helps introduce you to the chapter and guides you through the membership process.',
   },
   {
     question: 'Are Members encouraged to bring visitors?',
-    answer: 'Absolutely! BNI members are encouraged to invite business professionals to visit their chapter. Visitors get to experience a BNI meeting firsthand and see the value of membership.',
+    answer: 'Absolutely! BWN members are encouraged to invite business professionals to visit their chapter. Visitors get to experience a BWN meeting firsthand and see the value of membership.',
   },
   {
     question: 'How do you know new Members are reputable?',
-    answer: 'BNI has a thorough vetting process. Each applicant goes through a membership committee review, and existing members can provide feedback. This ensures high-quality, trustworthy professionals join the network.',
+    answer: 'BWN has a thorough vetting process. Each applicant goes through a membership committee review, and existing members can provide feedback. This ensures high-quality, trustworthy professionals join the network.',
   },
   {
-    question: 'What is BNI Online®?',
-    answer: 'BNI Online® allows members to participate in chapter meetings virtually. It provides the same structured networking experience with the convenience of meeting from anywhere.',
+    question: 'What is BWN Online®?',
+    answer: 'BWN Online® allows members to participate in chapter meetings virtually. It provides the same structured networking experience with the convenience of meeting from anywhere.',
   },
   {
-    question: 'Do ethical rules for certain professions prohibit participation in BNI?',
-    answer: 'BNI is designed to comply with professional ethical standards. Members from regulated professions can participate while adhering to their professional codes of conduct.',
+    question: 'Do ethical rules for certain professions prohibit participation in BWN?',
+    answer: 'BWN is designed to comply with professional ethical standards. Members from regulated professions can participate while adhering to their professional codes of conduct.',
   },
 ];
 
@@ -204,7 +204,7 @@ function DonutChart({ percentage }: { percentage: number }) {
 
 /* ── Page Component ─────────────────────────────────────── */
 
-export default function BNIExperiencePage() {
+export default function BWNExperiencePage() {
   /* Benefits carousel */
   const [benefitIndex, setBenefitIndex] = useState(0);
   const benefitTimer = useRef<ReturnType<typeof setInterval>>();
@@ -238,8 +238,8 @@ export default function BNIExperiencePage() {
   return (
     <>
       <Helmet>
-        <title>The BNI Experience | How BNI Works</title>
-        <meta name="description" content="Discover the power of referrals — from weekly structured meetings and member benefits to BNI testimonials and the meeting experience." />
+        <title>The BWN Experience | How BWN Works</title>
+        <meta name="description" content="Discover the power of referrals — from weekly structured meetings and member benefits to BWN testimonials and the meeting experience." />
       </Helmet>
 
       {/* ── Section 1: Power of Referrals Hero ──────────────── */}
@@ -285,7 +285,7 @@ export default function BNIExperiencePage() {
               <div className="overflow-hidden rounded-2xl shadow-xl">
                 <img
                   src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&q=80"
-                  alt="BNI members networking at an event"
+                  alt="BWN members networking at an event"
                   className="w-full h-[380px] lg:h-[440px] object-cover"
                 />
               </div>
@@ -410,10 +410,10 @@ export default function BNIExperiencePage() {
                 Hear from <span className="text-primary">Our Members</span>
               </h2>
               <p className="mt-3 text-gray-600 max-w-lg">
-                Don't just take our word for it. Find out why thousands of entrepreneurs around the world attribute their business success to BNI.
+                Don't just take our word for it. Find out why thousands of entrepreneurs around the world attribute their business success to BWN.
               </p>
             </div>
-            {/* MY BNI STORY branding */}
+            {/* MY BWN STORY branding */}
             <div className="shrink-0 hidden lg:block">
               <p className="text-right leading-none">
                 <span className="text-[2.5rem] font-black text-dark">MY </span>
@@ -498,7 +498,7 @@ export default function BNIExperiencePage() {
         </Container>
       </section>
 
-      {/* ── Section 4: Begin Your BNI Journey CTA ──────────── */}
+      {/* ── Section 4: Begin Your BWN Journey CTA ──────────── */}
       <section className="px-4 sm:px-8 lg:px-12 py-8">
         <div className="bg-primary rounded-2xl px-8 py-14 lg:py-20 text-center relative overflow-hidden max-w-[1200px] mx-auto">
           {/* Subtle world-map dot pattern */}
@@ -517,7 +517,7 @@ export default function BNIExperiencePage() {
           }} />
           <div className="relative z-10">
             <h2 className="text-3xl font-black text-white lg:text-4xl xl:text-5xl">
-              Begin Your BNI Journey
+              Begin Your BWN Journey
             </h2>
             <p className="mt-4 text-white/80 max-w-xl mx-auto text-base lg:text-lg">
               Want to expand your business and make powerful connections? Get started today.
@@ -532,7 +532,7 @@ export default function BNIExperiencePage() {
         </div>
       </section>
 
-      {/* ── Section 5: BNI Meeting Experience Video ────────── */}
+      {/* ── Section 5: BWN Meeting Experience Video ────────── */}
       <section className="bg-white py-20 lg:py-28">
         <Container>
           <motion.div
@@ -542,7 +542,7 @@ export default function BNIExperiencePage() {
             className="text-center mb-12"
           >
             <h2 className="text-4xl font-black text-dark lg:text-5xl">
-              BNI Meeting <span className="text-primary">Experience</span>
+              BWN Meeting <span className="text-primary">Experience</span>
             </h2>
           </motion.div>
 
@@ -557,7 +557,7 @@ export default function BNIExperiencePage() {
             <div className="rounded-2xl overflow-hidden shadow-2xl bg-gray-100">
               <img
                 src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=1200&q=80"
-                alt="BNI Meeting Experience video thumbnail"
+                alt="BWN Meeting Experience video thumbnail"
                 className="w-full aspect-video object-cover group-hover:scale-105 transition-transform duration-500"
                 loading="lazy"
               />
@@ -594,7 +594,7 @@ export default function BNIExperiencePage() {
               transition={{ delay: 0.1 }}
               className="text-gray-500 max-w-md text-base lg:text-lg"
             >
-              Attending a BNI meeting is an extraordinary experience and the first step on your journey to activating the power of referrals for your business.
+              Attending a BWN meeting is an extraordinary experience and the first step on your journey to activating the power of referrals for your business.
             </motion.p>
           </div>
 
@@ -619,7 +619,7 @@ export default function BNIExperiencePage() {
         </Container>
       </section>
 
-      {/* ── Section 7: Three Ways to Experience BNI ────────── */}
+      {/* ── Section 7: Three Ways to Experience BWN ────────── */}
       <section className="bg-[#f0f0f0] py-20 lg:py-28">
         <Container>
           <motion.div
@@ -629,7 +629,7 @@ export default function BNIExperiencePage() {
             className="text-center mb-4"
           >
             <h2 className="text-4xl font-black text-dark lg:text-5xl">
-              Three Ways <span className="text-primary font-black">to Experience BNI</span>
+              Three Ways <span className="text-primary font-black">to Experience BWN</span>
             </h2>
           </motion.div>
           <motion.p
@@ -753,7 +753,7 @@ export default function BNIExperiencePage() {
               allow="autoplay; encrypted-media"
               allowFullScreen
               className="h-full w-full"
-              title="BNI Meeting Experience Video"
+              title="BWN Meeting Experience Video"
             />
           </div>
         </div>

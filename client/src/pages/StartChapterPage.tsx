@@ -27,7 +27,7 @@ const REQUIREMENTS = [
   'A minimum of 20 founding members to launch',
   'A designated chapter leader and supporting committee',
   'A suitable weekly meeting venue in your area',
-  'Commitment to BNI\u2019s code of ethics and membership standards',
+  'Commitment to BWN\u2019s code of ethics and membership standards',
   'Regional director approval and onboarding support',
 ];
 
@@ -39,22 +39,22 @@ export default function StartChapterPage() {
 
   const onSubmit = async (data: FormData) => {
     await contactService.submitContact(data);
-    toast.success('Enquiry sent! A BNI representative will contact you within 48 hours.');
+    toast.success('Enquiry sent! A BWN representative will contact you within 48 hours.');
     reset();
   };
 
   return (
     <>
       <Helmet>
-        <title>Start a BNI Chapter | Launch in Your Area</title>
-        <meta name="description" content="Interested in starting a BNI chapter in your area? Learn the requirements and submit your interest." />
+        <title>Start a BWN Chapter | Launch in Your Area</title>
+        <meta name="description" content="Interested in starting a BWN chapter in your area? Learn the requirements and submit your interest." />
       </Helmet>
 
       <section className="bg-dark py-16">
         <Container>
-          <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-widest text-primary">Expand BNI</span>
+          <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-widest text-primary">Expand BWN</span>
           <h1 className="text-4xl font-black text-white lg:text-5xl">Start a Chapter</h1>
-          <p className="mt-4 max-w-xl text-gray-300">Bring the power of BNI to your community. Launch a chapter and help local businesses thrive together.</p>
+          <p className="mt-4 max-w-xl text-gray-300">Bring the power of BWN to your community. Launch a chapter and help local businesses thrive together.</p>
         </Container>
       </section>
 
@@ -104,7 +104,7 @@ export default function StartChapterPage() {
                     <CheckCircle className="h-7 w-7 text-green-600" />
                   </div>
                   <h3 className="font-bold text-dark">Thank you!</h3>
-                  <p className="text-sm text-gray-600">A BNI representative will reach out within 48 hours to discuss next steps.</p>
+                  <p className="text-sm text-gray-600">A BWN representative will reach out within 48 hours to discuss next steps.</p>
                   <button onClick={() => reset()} className="btn-secondary">Submit Another</button>
                 </div>
               ) : (

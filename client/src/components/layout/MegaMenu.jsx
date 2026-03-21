@@ -7,7 +7,7 @@ export default function MegaMenu() {
       { label: 'Leadership', href: '/about/leadership' },
       { label: 'National Directors', href: '/about/directors' },
       { label: 'Our Founder', href: '/about/founder' },
-      { label: 'BNI® Foundation', href: '/about/foundation' },
+      { label: 'BWN® Foundation', href: '/about/foundation' },
     ],
   };
 
@@ -31,11 +31,11 @@ export default function MegaMenu() {
   };
 
   const socialLinks = [
-    { icon: Facebook, href: 'https://facebook.com/bni', label: 'Facebook' },
-    { icon: Linkedin, href: 'https://linkedin.com/company/bni', label: 'LinkedIn' },
-    { icon: Instagram, href: 'https://instagram.com/bni', label: 'Instagram' },
-    { icon: Youtube, href: 'https://youtube.com/bni', label: 'YouTube' },
-    { icon: Twitter, href: 'https://twitter.com/bni', label: 'Twitter' },
+    { icon: Facebook, href: 'https://facebook.com/BWNGlobal', label: 'Facebook' },
+    { icon: Linkedin, href: 'https://linkedin.com/company/bwn', label: 'LinkedIn' },
+    { icon: Instagram, href: 'https://instagram.com/bwn', label: 'Instagram' },
+    { icon: Youtube, href: 'https://youtube.com/bwn', label: 'YouTube' },
+    { icon: Twitter, href: 'https://twitter.com/BWNGlobal', label: 'Twitter' },
   ];
 
   return (
@@ -141,7 +141,7 @@ export default function MegaMenu() {
                   </div>
                   <div className="text-white text-xs leading-tight">
                     <div className="font-semibold">Experience the</div>
-                    <div className="font-bold">2026 BNI Global</div>
+                    <div className="font-bold">2026 BWN Global</div>
                     <div className="font-bold">Convention in Monaco!</div>
                   </div>
                 </div>

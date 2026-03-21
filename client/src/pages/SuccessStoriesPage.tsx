@@ -25,21 +25,21 @@ const FEATURED_STORIES = [
     chapter: 'BR - AR Connect Virtual',
     headline: 'I am a completely different person now compared to when I first joined.',
     excerpt:
-      'When I joined BNI, I was extremely shy and struggled with public speaking. The weekly 30-second presentation was my nightmare. However, I needed to grow...',
+      'When I joined BWN, I was extremely shy and struggled with public speaking. The weekly 30-second presentation was my nightmare. However, I needed to grow...',
     image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80',
   },
   {
     name: 'Daniel Schmidt',
     chapter: 'Slovakia - Web Design Chapter',
-    headline: 'BNI helped me build my freelance business into a full agency within 2 years.',
+    headline: 'BWN helped me build my freelance business into a full agency within 2 years.',
     excerpt:
-      'When I first joined BNI, I was a solo web designer. Through the referrals and connections I made, I was able to grow my team and triple my revenue...',
+      'When I first joined BWN, I was a solo web designer. Through the referrals and connections I made, I was able to grow my team and triple my revenue...',
     image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80',
   },
   {
     name: 'Yusuf Ziya Nisanoğlu',
     chapter: 'Turkey - Real Estate Chapter',
-    headline: "I attribute 40% of my income directly to BNI connections.",
+    headline: "I attribute 40% of my income directly to BWN connections.",
     excerpt:
       'The structured networking format and accountability system helped me consistently generate high-quality referrals that convert into real business...',
     image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80',
@@ -47,7 +47,7 @@ const FEATURED_STORIES = [
   {
     name: 'Marek Černek',
     chapter: 'Slovakia - Conscious Living',
-    headline: 'BNI fundamentally changed my life for the better.',
+    headline: 'BWN fundamentally changed my life for the better.',
     excerpt:
       'I have grown both in business and on the path of self-development. The connections and the community pushed me to become a better professional and person...',
     image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&q=80',
@@ -78,7 +78,7 @@ const FALLBACK_STORIES: StoryCard[] = [
     _id: 'f1',
     authorName: 'Yusuf Ziya Nisanoğlu',
     authorTitle: 'Ticari Gayrimenkul Uzmanı',
-    content: "Kazancımın %40'ını BNI ile elde ediyorum. BNI bana iş hayatımda inanılmaz bir referans ağı sundu.",
+    content: "Kazancımın %40'ını BWN ile elde ediyorum. BWN bana iş hayatımda inanılmaz bir referans ağı sundu.",
     country: 'Turkey',
     authorPhoto: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80',
   },
@@ -86,7 +86,7 @@ const FALLBACK_STORIES: StoryCard[] = [
     _id: 'f2',
     authorName: 'Daniel Schmidt',
     authorTitle: 'Web-design, e-learning, e-commerce',
-    content: 'Do BNI som vstupoval ako čerstvý podnikateľ. Vďaka členstvu som sa v podnikaní zorientoval a postupne získaval prvé zákazky.',
+    content: 'Do BWN som vstupoval ako čerstvý podnikateľ. Vďaka členstvu som sa v podnikaní zorientoval a postupne získaval prvé zákazky.',
     country: 'Slovakia',
     authorPhoto: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80',
   },
@@ -94,14 +94,14 @@ const FALLBACK_STORIES: StoryCard[] = [
     _id: 'f3',
     authorName: 'Marek Černek',
     authorTitle: 'vedomé stravovanie',
-    content: 'BNI mi od základov zmenilo žovot k lepšiemu. Posunul som sa ako v podnikaní, tak aj na ceste v sebarozvoji.',
+    content: 'BWN mi od základov zmenilo žovot k lepšiemu. Posunul som sa ako v podnikaní, tak aj na ceste v sebarozvoji.',
     country: 'Slovakia',
     authorPhoto: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80',
   },
   {
     _id: 'f4',
     authorName: 'Andrei Aron',
-    content: 'BNI has given me the platform to share my story and connect with amazing entrepreneurs worldwide.',
+    content: 'BWN has given me the platform to share my story and connect with amazing entrepreneurs worldwide.',
     country: 'Romania',
     authorPhoto: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&q=80',
     videoUrl: 'https://youtube.com/watch?v=example1',
@@ -110,14 +110,14 @@ const FALLBACK_STORIES: StoryCard[] = [
     _id: 'f5',
     authorName: 'Monja Prole',
     authorTitle: 'biznisové stratégie',
-    content: 'BNI mi dalo viac ako len profesionálnu sieť kontaktov – stalo sa pre mňa životnou filozofiou.',
+    content: 'BWN mi dalo viac ako len profesionálnu sieť kontaktov – stalo sa pre mňa životnou filozofiou.',
     country: 'Slovakia',
     authorPhoto: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80',
   },
   {
     _id: 'f6',
     authorName: 'Randy Rosales',
-    content: 'BNI transformed my approach to networking and helped me build lasting business relationships across Canada.',
+    content: 'BWN transformed my approach to networking and helped me build lasting business relationships across Canada.',
     country: 'Canada',
     authorPhoto: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=400&q=80',
     videoUrl: 'https://youtube.com/watch?v=example2',
@@ -126,14 +126,14 @@ const FALLBACK_STORIES: StoryCard[] = [
     _id: 'f7',
     authorName: 'Jana Vikrutová',
     authorTitle: 'realitná maklérka',
-    content: 'V BNI som našla úžasnú komunitu podnikateľov, ktorí si navzájom pomáhajú, inšpirujú sa a spoločne rastú.',
+    content: 'V BWN som našla úžasnú komunitu podnikateľov, ktorí si navzájom pomáhajú, inšpirujú sa a spoločne rastú.',
     country: 'Slovakia',
     authorPhoto: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80',
   },
   {
     _id: 'f8',
     authorName: 'Cindy Csordas',
-    content: 'Being part of BNI has been the single best investment for growing my consulting practice in Canada.',
+    content: 'Being part of BWN has been the single best investment for growing my consulting practice in Canada.',
     country: 'Canada',
     authorPhoto: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&q=80',
     videoUrl: 'https://youtube.com/watch?v=example3',
@@ -191,16 +191,16 @@ export default function SuccessStoriesPage() {
   return (
     <>
       <Helmet>
-        <title>BNI Success Stories | Member Testimonials</title>
+        <title>BWN Success Stories | Member Testimonials</title>
         <meta
           name="description"
-          content="Hear from BNI members around the world who have grown their businesses through the power of referral networking."
+          content="Hear from BWN members around the world who have grown their businesses through the power of referral networking."
         />
       </Helmet>
 
       {/* ── Hero: Featured Story Carousel ──────────────────── */}
       <section className="relative bg-[#f3f3f3] py-16 lg:py-24 overflow-hidden">
-        {/* Blurred BNI background accent */}
+        {/* Blurred BWN background accent */}
         <div className="absolute right-0 top-0 w-1/2 h-full pointer-events-none opacity-30">
           <img
             src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&q=40"
@@ -255,11 +255,11 @@ export default function SuccessStoriesPage() {
                     </div>
 
                     <div className="mt-6 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
-                      {/* MY BNI STORY branding */}
+                      {/* MY BWN STORY branding */}
                       <div className="shrink-0">
                         <p className="leading-none">
                           <span className="text-2xl font-black text-dark">MY </span>
-                          <span className="text-2xl font-black text-primary">BNi</span>
+                          <span className="text-2xl font-black text-primary">BWN</span>
                           <span className="text-xs text-primary align-super">®</span>
                         </p>
                         <p className="leading-none -mt-0.5">
@@ -349,11 +349,11 @@ export default function SuccessStoriesPage() {
               transition={{ duration: 0.5 }}
               className="lg:w-[260px] shrink-0 lg:sticky lg:top-28 lg:self-start"
             >
-              {/* MY BNI STORY logo */}
+              {/* MY BWN STORY logo */}
               <div className="mb-8">
                 <p className="leading-none">
                   <span className="text-[2rem] font-black text-dark">MY </span>
-                  <span className="text-[2rem] font-black text-primary">BNi</span>
+                  <span className="text-[2rem] font-black text-primary">BWN</span>
                   <span className="text-xs text-primary align-super">®</span>
                 </p>
                 <p className="leading-none -mt-0.5">
@@ -365,7 +365,7 @@ export default function SuccessStoriesPage() {
 
               <h3 className="text-2xl font-bold text-primary mb-3">Our Stories</h3>
               <p className="text-sm text-gray-500 leading-relaxed mb-8">
-                BNI Members around the world create success stories every day with business growth
+                BWN Members around the world create success stories every day with business growth
                 created through trust and quality relationships.
               </p>
 
