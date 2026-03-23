@@ -1,126 +1,306 @@
+import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { z } from 'zod';
 import Container from '../components/ui/Container';
-import Input from '../components/ui/Input';
-import Button from '../components/ui/Button';
-import SectionTitle from '../components/ui/SectionTitle';
 import { contactService } from '../services/contactService';
 import toast from 'react-hot-toast';
-import { CheckCircle, MapPin, Users, TrendingUp } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
 
-const schema = z.object({
-  name: z.string().min(2),
-  email: z.string().email(),
-  phone: z.string().min(7),
-  subject: z.string().default('Start a Chapter Enquiry'),
-  message: z.string().min(20, 'Please tell us more about your interest'),
-  inquiryType: z.string().default('Start a Chapter'),
-  country: z.string().min(2, 'Please enter your country'),
-});
+// ─── HOW IT WORKS STEPS ─────────────────────────────────────────
 
-type FormData = z.infer<typeof schema>;
+const STEPS = [
+  {
+    number: '01',
+    title: 'Contact your Local BNI Team',
+    description: 'Your regional team will talk you through the options for getting started and introduce you to fellow business owners who have successfully launched BNI Chapters. You\'ll also meet the team who will be guiding you through the process.',
+  },
+  {
+    number: '02',
+    title: 'Attend an Interest Meeting',
+    description: 'Interest Meetings talk you through the steps of starting a BNI Chapter. You may also be invited to visit an existing Chapter to see how it works, and how it helps members to grow their businesses.',
+  },
+  {
+    number: '03',
+    title: 'Form a Core Group',
+    description: 'Together with your local BNI team, you\'ll start building your Core Group — a team of founding members who share your vision. This is where your chapter begins to take shape.',
+  },
+  {
+    number: '04',
+    title: 'Launch Your Chapter',
+    description: 'Once you have enough committed members, your chapter will officially launch. BNI will support you with training, resources, and ongoing guidance to ensure a successful start.',
+  },
+];
 
-const REQUIREMENTS = [
-  'A minimum of 20 founding members to launch',
-  'A designated chapter leader and supporting committee',
-  'A suitable weekly meeting venue in your area',
-  'Commitment to BWN\u2019s code of ethics and membership standards',
-  'Regional director approval and onboarding support',
+// ─── COUNTRIES LIST ─────────────────────────────────────────────
+
+const COUNTRIES = [
+  'United States', 'United Kingdom', 'Canada', 'Australia', 'India',
+  'Germany', 'France', 'Italy', 'Spain', 'Netherlands', 'Sweden',
+  'Singapore', 'China', 'Japan', 'Brazil', 'Mexico', 'Argentina',
+  'South Africa', 'New Zealand', 'Ireland', 'Finland', 'Vietnam',
+  'Sri Lanka', 'Puerto Rico', 'Other',
 ];
 
 export default function StartChapterPage() {
-  const { register, handleSubmit, formState: { errors, isSubmitting, isSubmitSuccessful }, reset } = useForm<FormData>({
-    resolver: zodResolver(schema),
-    defaultValues: { subject: 'Start a Chapter Enquiry', inquiryType: 'Start a Chapter' },
+  const [formData, setFormData] = useState({
+    firstName: '', lastName: '', country: '', postalCode: '',
+    phone: '', email: '', message: '',
+    newsletter: false, agreePrivacy: false,
   });
+  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
 
-  const onSubmit = async (data: FormData) => {
-    await contactService.submitContact(data);
-    toast.success('Enquiry sent! A BWN representative will contact you within 48 hours.');
-    reset();
+  const updateField = (field: string, value: string | boolean) => {
+    setFormData((prev) => ({ ...prev, [field]: value }));
+    if (errors[field]) setErrors((prev) => { const n = { ...prev }; delete n[field]; return n; });
+  };
+
+  const validate = () => {
+    const errs: Record<string, string> = {};
+    if (!formData.firstName.trim()) errs.firstName = 'First name is required';
+    if (!formData.lastName.trim()) errs.lastName = 'Last name is required';
+    if (!formData.country) errs.country = 'Country is required';
+    if (!formData.postalCode.trim()) errs.postalCode = 'Postal code is required';
+    if (!formData.phone.trim()) errs.phone = 'Phone number is required';
+    if (!formData.email.trim()) errs.email = 'Email is required';
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) errs.email = 'Invalid email';
+    if (!formData.agreePrivacy) errs.agreePrivacy = 'You must agree to the Privacy Policy and Terms';
+    setErrors(errs);
+    return Object.keys(errs).length === 0;
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!validate()) return;
+
+    setIsSubmitting(true);
+    try {
+      await contactService.submitContact({
+        name: `${formData.firstName} ${formData.lastName}`,
+        email: formData.email,
+        phone: formData.phone,
+        subject: 'Start a Chapter Enquiry',
+        message: formData.message || `Country: ${formData.country}, Postal Code: ${formData.postalCode}`,
+        inquiryType: 'Start a Chapter',
+        country: formData.country,
+      });
+      toast.success('Enquiry sent! A BNI representative will contact you soon.');
+      setIsSuccess(true);
+    } catch (err: unknown) {
+      toast.error((err as Error).message ?? 'Something went wrong. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
     <>
       <Helmet>
-        <title>Start a BWN Chapter | Launch in Your Area</title>
-        <meta name="description" content="Interested in starting a BWN chapter in your area? Learn the requirements and submit your interest." />
+        <title>Start a BNI Chapter | Launch in Your Area</title>
+        <meta name="description" content="Start a new BNI Chapter in your area. Fill out the form and our team will guide you through the process." />
       </Helmet>
 
-      <section className="bg-dark py-16">
-        <Container>
-          <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-widest text-primary">Expand BWN</span>
-          <h1 className="text-4xl font-black text-white lg:text-5xl">Start a Chapter</h1>
-          <p className="mt-4 max-w-xl text-gray-300">Bring the power of BWN to your community. Launch a chapter and help local businesses thrive together.</p>
-        </Container>
-      </section>
-
-      {/* Benefits */}
       <section className="section-padding bg-white">
         <Container>
-          <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:items-start">
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
+
+            {/* ── LEFT: Info + How it Works ──────────────────── */}
             <div>
-              <SectionTitle eyebrow="Why Start a Chapter" title="The Opportunity" centered={false} />
-              <div className="space-y-6">
-                {[
-                  { Icon: MapPin, title: 'Serve Your Community', desc: 'Give local business owners access to a trusted, structured referral network.' },
-                  { Icon: Users, title: 'Build Your Network', desc: 'As a chapter founder, you build deep relationships with the most motivated business professionals in your area.' },
-                  { Icon: TrendingUp, title: 'Generate Revenue', desc: 'Chapter founders often become the most active referral recipients in the group.' },
-                ].map(({ Icon, title, desc }) => (
-                  <div key={title} className="flex items-start gap-4">
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10">
-                      <Icon className="h-5 w-5 text-primary" />
+              <h1 className="text-4xl font-light text-dark lg:text-5xl">
+                Start a <span className="font-black text-primary">BNI Chapter</span>
+              </h1>
+
+              <p className="mt-6 max-w-lg text-gray-500 leading-relaxed">
+                Starting a new BNI Chapter is a powerful way to grow your business and support your local business community.
+              </p>
+              <p className="mt-4 max-w-lg text-gray-500 leading-relaxed">
+                If your business category is already represented in local Chapters, your regional <span className="font-semibold text-dark">BNI team</span> will support you in creating a new one.
+              </p>
+
+              {/* How it Works */}
+              <h2 className="mt-14 text-2xl font-light text-dark">
+                How it <span className="font-black text-primary">Works</span>
+              </h2>
+
+              <div className="mt-8 space-y-0">
+                {STEPS.map((step, i) => (
+                  <div key={step.number} className="flex gap-6">
+                    {/* Number + vertical line */}
+                    <div className="flex flex-col items-center">
+                      <span className="text-3xl font-black text-primary">{step.number}</span>
+                      {i < STEPS.length - 1 && (
+                        <div className="mt-2 flex-1 w-px bg-gray-200" />
+                      )}
                     </div>
-                    <div>
-                      <h3 className="font-semibold text-dark">{title}</h3>
-                      <p className="text-sm text-gray-600">{desc}</p>
+                    {/* Content */}
+                    <div className="pb-10">
+                      <h3 className="text-lg font-bold text-dark">{step.title}</h3>
+                      <p className="mt-2 text-sm leading-relaxed text-gray-500">{step.description}</p>
                     </div>
                   </div>
                 ))}
               </div>
-
-              <div className="mt-10">
-                <h3 className="mb-4 font-bold text-dark">Requirements</h3>
-                <ul className="space-y-3">
-                  {REQUIREMENTS.map((req) => (
-                    <li key={req} className="flex items-start gap-3 text-sm text-gray-600">
-                      <CheckCircle className="h-4 w-4 shrink-0 text-primary mt-0.5" />
-                      {req}
-                    </li>
-                  ))}
-                </ul>
-              </div>
             </div>
 
-            {/* Form */}
-            <div className="card">
-              <h2 className="mb-6 text-xl font-bold text-dark">Express Your Interest</h2>
-              {isSubmitSuccessful ? (
-                <div className="flex flex-col items-center gap-4 py-8 text-center">
+            {/* ── RIGHT: Form ───────────────────────────────── */}
+            <div className="rounded-2xl bg-light-bg p-8 lg:p-10">
+              {isSuccess ? (
+                <div className="flex flex-col items-center gap-4 py-12 text-center">
                   <div className="flex h-14 w-14 items-center justify-center rounded-full bg-green-100">
                     <CheckCircle className="h-7 w-7 text-green-600" />
                   </div>
-                  <h3 className="font-bold text-dark">Thank you!</h3>
-                  <p className="text-sm text-gray-600">A BWN representative will reach out within 48 hours to discuss next steps.</p>
-                  <button onClick={() => reset()} className="btn-secondary">Submit Another</button>
+                  <h3 className="text-xl font-bold text-dark">Thank you!</h3>
+                  <p className="text-sm text-gray-600">A BNI representative will reach out to discuss next steps.</p>
+                  <button onClick={() => { setIsSuccess(false); setFormData({ firstName: '', lastName: '', country: '', postalCode: '', phone: '', email: '', message: '', newsletter: false, agreePrivacy: false }); }} className="btn-secondary mt-2">
+                    Submit Another
+                  </button>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-                  <Input label="Full Name *" {...register('name')} error={errors.name?.message} />
-                  <Input label="Email *" type="email" {...register('email')} error={errors.email?.message} />
-                  <Input label="Phone *" type="tel" {...register('phone')} error={errors.phone?.message} />
-                  <Input label="Country *" {...register('country')} error={errors.country?.message} />
-                  <div>
-                    <label className="form-label">Tell us about your interest *</label>
-                    <textarea {...register('message')} rows={4} className="form-input" placeholder="Where are you located? Do you already have potential members in mind?" />
-                    {errors.message && <p className="mt-1 text-sm text-red-600">{errors.message.message}</p>}
+                <form onSubmit={handleSubmit} className="space-y-5">
+                  {/* First Name / Last Name */}
+                  <div className="grid gap-4 sm:grid-cols-2">
+                    <div>
+                      <label className="mb-1.5 block text-sm font-bold text-dark">
+                        First Name <span className="text-primary">*</span>
+                      </label>
+                      <input
+                        type="text"
+                        value={formData.firstName}
+                        onChange={(e) => updateField('firstName', e.target.value)}
+                        placeholder="Enter your first name"
+                        className="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-sm text-dark placeholder-gray-400 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
+                      />
+                      {errors.firstName && <p className="mt-1 text-xs text-primary">{errors.firstName}</p>}
+                    </div>
+                    <div>
+                      <label className="mb-1.5 block text-sm font-bold text-dark">
+                        Last Name <span className="text-primary">*</span>
+                      </label>
+                      <input
+                        type="text"
+                        value={formData.lastName}
+                        onChange={(e) => updateField('lastName', e.target.value)}
+                        placeholder="Enter your last name"
+                        className="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-sm text-dark placeholder-gray-400 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
+                      />
+                      {errors.lastName && <p className="mt-1 text-xs text-primary">{errors.lastName}</p>}
+                    </div>
                   </div>
-                  <Button type="submit" isLoading={isSubmitting} className="w-full justify-center">
-                    Submit Interest
-                  </Button>
+
+                  {/* Country / Postal Code */}
+                  <div className="grid gap-4 sm:grid-cols-2">
+                    <div>
+                      <label className="mb-1.5 block text-sm font-bold text-dark">
+                        Country <span className="text-primary">*</span>
+                      </label>
+                      <select
+                        value={formData.country}
+                        onChange={(e) => updateField('country', e.target.value)}
+                        className="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-sm text-dark focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 appearance-none"
+                      >
+                        <option value="">Select the country</option>
+                        {COUNTRIES.map((c) => (
+                          <option key={c} value={c}>{c}</option>
+                        ))}
+                      </select>
+                      {errors.country && <p className="mt-1 text-xs text-primary">{errors.country}</p>}
+                    </div>
+                    <div>
+                      <label className="mb-1.5 block text-sm font-bold text-dark">
+                        Postal Code <span className="text-primary">*</span>
+                      </label>
+                      <input
+                        type="text"
+                        value={formData.postalCode}
+                        onChange={(e) => updateField('postalCode', e.target.value)}
+                        placeholder="Enter your postal code"
+                        className="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-sm text-dark placeholder-gray-400 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
+                      />
+                      {errors.postalCode && <p className="mt-1 text-xs text-primary">{errors.postalCode}</p>}
+                    </div>
+                  </div>
+
+                  {/* Phone / Email */}
+                  <div className="grid gap-4 sm:grid-cols-2">
+                    <div>
+                      <label className="mb-1.5 block text-sm font-bold text-dark">
+                        Phone Number <span className="text-primary">*</span>
+                      </label>
+                      <input
+                        type="tel"
+                        value={formData.phone}
+                        onChange={(e) => updateField('phone', e.target.value)}
+                        placeholder="Enter your phone number"
+                        className="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-sm text-dark placeholder-gray-400 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
+                      />
+                      {errors.phone && <p className="mt-1 text-xs text-primary">{errors.phone}</p>}
+                    </div>
+                    <div>
+                      <label className="mb-1.5 block text-sm font-bold text-dark">
+                        E-mail <span className="text-primary">*</span>
+                      </label>
+                      <input
+                        type="email"
+                        value={formData.email}
+                        onChange={(e) => updateField('email', e.target.value)}
+                        placeholder="Enter your e-mail address"
+                        className="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-sm text-dark placeholder-gray-400 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
+                      />
+                      {errors.email && <p className="mt-1 text-xs text-primary">{errors.email}</p>}
+                    </div>
+                  </div>
+
+                  {/* Message */}
+                  <div>
+                    <label className="mb-1.5 block text-sm font-bold text-dark">Message</label>
+                    <textarea
+                      value={formData.message}
+                      onChange={(e) => updateField('message', e.target.value)}
+                      rows={4}
+                      placeholder="Message"
+                      className="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-sm text-dark placeholder-gray-400 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 resize-none"
+                    />
+                  </div>
+
+                  {/* Checkboxes */}
+                  <div className="space-y-3">
+                    <label className="flex items-start gap-3 cursor-pointer">
+                      <input
+                        type="checkbox"
+                        checked={formData.newsletter}
+                        onChange={(e) => updateField('newsletter', e.target.checked)}
+                        className="mt-0.5 h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary/30"
+                      />
+                      <span className="text-sm text-gray-600">
+                        I would like to sign up to receive BNI's monthly newsletter, BNI SuccessNet™.
+                      </span>
+                    </label>
+
+                    <label className="flex items-start gap-3 cursor-pointer">
+                      <input
+                        type="checkbox"
+                        checked={formData.agreePrivacy}
+                        onChange={(e) => updateField('agreePrivacy', e.target.checked)}
+                        className="mt-0.5 h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary/30"
+                      />
+                      <span className="text-sm text-gray-600">
+                        I agree to be contacted by BNI according to the{' '}
+                        <a href="/privacy" className="font-semibold text-primary hover:underline">Privacy Policy</a>
+                        {' '}and{' '}
+                        <a href="/terms" className="font-semibold text-primary hover:underline">Terms and Conditions</a>.
+                      </span>
+                    </label>
+                    {errors.agreePrivacy && <p className="text-xs text-primary">{errors.agreePrivacy}</p>}
+                  </div>
+
+                  {/* Submit */}
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full rounded-lg bg-primary px-8 py-4 text-sm font-bold uppercase tracking-wider text-white transition-colors hover:bg-primary-dark disabled:opacity-60 sm:w-auto"
+                  >
+                    {isSubmitting ? 'Submitting...' : 'SUBMIT'}
+                  </button>
                 </form>
               )}
             </div>
