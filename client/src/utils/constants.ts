@@ -199,7 +199,7 @@ export const NAV_ITEMS: NavItem[] = [
           items: [
             { label: 'Find a Chapter', href: '/find-a-chapter' },
             { label: 'Start a Chapter', href: '/start-a-chapter' },
-            { label: 'Exclusive Member Benefits', href: '/the-bwn-experience#benefits' },
+            { label: 'Exclusive Member Benefits', href: '/Exclusive-Member-Benefits' },
             { label: 'Contact Us', href: '/contact' },
           ],
         },

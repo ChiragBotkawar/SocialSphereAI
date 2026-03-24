@@ -25,6 +25,7 @@ const NationalDirectorsPage = lazy(() => import('./pages/NationalDirectorsPage')
 const OurFounderPage = lazy(() => import('./pages/OurFounderPage'));
 const InTheMediaPage = lazy(() => import('./pages/InTheMediaPage'));
 const NetworkingTipsPage = lazy(() => import('./pages/NetworkingTipsPage'));
+const MemberBenefitsPage = lazy(() => import('./pages/MemberBenefitsPage'));
 
 function AppRoutes() {
   return (
@@ -48,6 +49,7 @@ function AppRoutes() {
           <Route path="the-bwn-experience" element={<BWNExperiencePage />} />
           <Route path="find-a-chapter" element={<FindChapterPage />} />
           <Route path="start-a-chapter" element={<StartChapterPage />} />
+          <Route path="Exclusive-Member-Benefits" element={<MemberBenefitsPage />} />
           <Route path="events" element={<EventsPage />} />
           <Route path="blog" element={<BlogPage />} />
           <Route path="blog/:slug" element={<BlogDetailPage />} />

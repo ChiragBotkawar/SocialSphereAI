@@ -38,7 +38,7 @@ const COL3 = [
 const COL4 = [
   { label: 'Find a Chapter', href: '/find-a-chapter' },
   { label: 'Start a Chapter', href: '/start-a-chapter' },
-  { label: 'Exclusive Member Benefits', href: '/about' },
+  { label: 'Exclusive Member Benefits', href: '/Exclusive-Member-Benefits' },
   { label: 'Contact Us', href: '/contact' },
 ];
 

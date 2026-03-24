@@ -4,11 +4,13 @@ import { Menu, X, ChevronDown, Mail, Search, Facebook, Linkedin, Instagram, Yout
 import { cn } from '../../utils/helpers';
 import { NAV_ITEMS, type NavItem } from '../../utils/constants';
 import MobileNav from './MobileNav';
+import GetInvitedJourney from '../GetInvitedJourney';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [journeyOpen, setJourneyOpen] = useState(false);
   const location = useLocation();
 
   // Detect scroll for sticky shadow
@@ -194,12 +196,12 @@ export default function Header() {
 
           {/* GET INVITED — outside the pill */}
           <div className="hidden xl:flex items-center shrink-0">
-            <Link
-              to="/find-a-chapter"
+            <button
+              onClick={() => setJourneyOpen(true)}
               className="inline-flex bg-primary hover:bg-primary-dark text-white font-bold px-5 py-2.5 rounded-full text-sm uppercase tracking-wider transition-colors shadow-md whitespace-nowrap"
             >
               GET INVITED
-            </Link>
+            </button>
           </div>
 
           {/* Mobile hamburger */}
@@ -215,6 +217,7 @@ export default function Header() {
       </header>
 
       <MobileNav isOpen={mobileOpen} onClose={() => setMobileOpen(false)} />
+      <GetInvitedJourney isOpen={journeyOpen} onClose={() => setJourneyOpen(false)} />
     </>
   );
 }
